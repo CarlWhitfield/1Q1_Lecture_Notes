@@ -22,72 +22,67 @@
 \usepackage{bookml/bookml}
 \usepackage{comment}
 \usepackage{xcolor}
+\usepackage{framed} 
 
 \setlength{\parindent}{0pt}
 \numberwithin{equation}{subsection}
 
-\newtheorem{example}{Example}[subsection]
-\theoremstyle{definition} 
 \newtheorem{defn}{Definition}[subsection]
+\theoremstyle{definition} 
+\newtheorem{example}{Example}[subsection]
+
+\definecolor{solcol}{RGB}{250, 255, 252}
+\definecolor{solframecol}{RGB}{32, 116, 44}
 
 
 \ifcsname omitSolutions\endcsname
   \excludecomment{solution}
 \else
     \iflatexml % for the HTML
-        \newenvironment{sol}{
-            \<details>\<summary>\<b>Solution.\</b>\</summary>\<p>}
-            {\</p>\</details>}
+        \newenvironment{solution}{
+            \<details>\<summary>\<b>Solution.\</b>\</summary>}
+            {\</details>}
     \else      % for the PDF
-        \newenvironment{sol}{
-        {\bf{Solution.}}}{}
+        \newenvironment{solution}{
+        \bgroup\colorlet{TFFrameColor}{solframecol}\colorlet{TFTitleColor}{white}\begin{titled-frame}{Solution}}{\end{titled-frame}\egroup} 
     \fi
-
-    %Box for solutions
-    \definecolor{solcol}{RGB}{230, 255, 241}
-    \definecolor{solframecol}{RGB}{32, 116, 44}
-    \newsavebox{\solbox}
-    \newenvironment{solution}
-      {\begin{lrbox}{\solbox}%
-       \begin{minipage}{\dimexpr\columnwidth-2\fboxsep\relax}
-       \setlength{\parindent}{0pt}
-       \begin{sol}}
-      {\end{sol}\end{minipage}\end{lrbox}%
-       \begin{center}
-       \setlength{\fboxrule}{3pt}
-       \setlength{\fboxsep}{8pt}
-       \fcolorbox{solframecol}{solcol}{\usebox{\solbox}}
-       \end{center}}
 \fi
 
 %box for learning outcomes
-\definecolor{locol}{RGB}{230, 241, 255}
 \definecolor{loframecol}{RGB}{46, 66, 136}
-\newsavebox{\lobox}
-\newenvironment{learningoutcomes}
-  {\begin{lrbox}{\lobox}%
-   \begin{minipage}{\dimexpr\columnwidth-2\fboxsep\relax}
-   \setlength{\parindent}{0pt}{\bf Learning Outcomes}\par}
-  {\end{minipage}\end{lrbox}%
-   \begin{center}
-   \setlength{\fboxrule}{2pt}
-   \setlength{\fboxsep}{8pt}
-   \fcolorbox{loframecol}{locol}{\usebox{\lobox}}
-   \end{center}}
+\iflatexml % for the HTML
+    \newenvironment{learningoutcomes}{
+        \<div class="lo-box">
+            \<div class="lo-box-title">
+                Learning Outcomes
+            \</div>
+        }        
+        {\</div>}
+\else      % for the PDF
+    \newenvironment{learningoutcomes}{
+    \bgroup\colorlet{TFFrameColor}{loframecol}\colorlet{TFTitleColor}{white}\begin{titled-frame}{Learning Outcomes}}{\end{titled-frame}\egroup} 
+\fi
+    
 
 %box for definitions
 \definecolor{defcol}{RGB}{230, 230, 230}
-\newsavebox{\defbox}
-\newenvironment{definition}
-  {\begin{lrbox}{\defbox}%
-   \begin{minipage}{\dimexpr\columnwidth-2\fboxsep\relax}
-   \setlength{\parindent}{0pt}
-   \begin{defn}}
-  {\end{defn}\end{minipage}\end{lrbox}%
-   \begin{center}
-   \setlength{\fboxsep}{8pt}
-   \colorbox{defcol}{\usebox{\defbox}}
-   \end{center}}
+\iflatexml % for the HTML
+    \newenvironment{definition}{
+            \<div class="def-box"> \begin{defn}}        
+            {\end{defn} \</div>}
+\else      % for the PDF
+    \newsavebox{\defbox}
+    \newenvironment{definition}
+      {\begin{lrbox}{\defbox}%
+       \begin{minipage}{\dimexpr\columnwidth-2\fboxsep\relax}
+       \setlength{\parindent}{0pt}
+       \begin{defn}}
+      {\end{defn}\end{minipage}\end{lrbox}%
+       \begin{center}
+       \setlength{\fboxsep}{8pt}
+       \colorbox{defcol}{\usebox{\defbox}}
+       \end{center}}
+\fi
 
 
 % {\begin{lrbox}{\mybox}\begin{minipage}{0.9\textwidth}\begin{ex}}
