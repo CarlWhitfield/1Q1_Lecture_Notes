@@ -1,0 +1,64 @@
+\documentclass[british,11pt,oneside]{article}
+%%% RECOMMENDED
+% better accented letters and ligatures in PDF
+\usepackage[T1]{fontenc}
+% set language of outputs (due to issues with TeX Live >= 2025 and LaTeXML <= 0.8.8, put 'british' in the *class* options!)
+\usepackage{babel}
+% PDF hyperlinks and metadata
+\usepackage[pdfusetitle,colorlinks]{hyperref}
+% higher quality variant of Computer Modern
+\usepackage{lmodern}
+% title and author
+\usepackage{graphicx} % Required for inserting images
+\usepackage{fullpage}
+\usepackage{setspace}
+\usepackage{tikz,lipsum,lmodern}
+\usepackage[most]{tcolorbox}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{bookml/bookml}
+\usepackage{comment}
+
+\onehalfspacing
+\setlength{\parindent}{0pt}
+\numberwithin{equation}{subsection}
+
+\newtcbtheorem[auto counter,number within=subsection]{example}%
+  {Example}{fonttitle=\bfseries\upshape, colback=blue!5!white,colframe=blue!75!black}{ex}
+
+\newtcbtheorem[auto counter,number within=subsection]{definition}%
+  {Definition}{fonttitle=\bfseries\upshape, fontupper=\slshape, colback=green!5!white,colframe=green!75!black}{def}
+
+\ifcsname omitSolutions\endcsname
+  \excludecomment{solution}
+\else
+    \iflatexml % for the HTML
+        \newenvironment{solution}{
+            \tcbline
+            \<details>\<summary>Solution.\</summary>}
+            {\</details>}
+    \else      % for the PDF
+        \newenvironment{solution}{
+        \tcbline
+        {\bf Solution:}}{}
+    \fi
+\fi
+
+
+% \includeonly{section_2}
+
+\title{MATH19641: Mathematics 1Q1 \\Lecture Notes}
+\author{Carl A. Whitfield}
+\date{Semester 1 -- Academic Year 2026/27}
+
+\begin{document}
+
+\include{Sections/section_0}
+\include{Sections/section_1}
+% \include{Sections/section_2}
+
+
+\end{document}
+
+
