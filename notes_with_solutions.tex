@@ -1,4 +1,7 @@
-\documentclass[british,11pt,oneside]{article}
+\documentclass[11pt]{amsart}
+
+
+
 %%% RECOMMENDED
 % better accented letters and ligatures in PDF
 \usepackage[T1]{fontenc}
@@ -24,23 +27,44 @@
 \setlength{\parindent}{0pt}
 \numberwithin{equation}{subsection}
 
-\newtcbtheorem[auto counter,number within=subsection]{example}%
-  {Example}{fonttitle=\bfseries\upshape, colback=blue!5!white,colframe=blue!75!black}{ex}
+\newtheorem{example}{Example}
+\numberwithin{example}{subsection}
+\newtheorem{definition}{Definition}
+\numberwithin{definition}{subsection}
 
-\newtcbtheorem[auto counter,number within=subsection]{definition}%
-  {Definition}{fonttitle=\bfseries\upshape, fontupper=\slshape, colback=green!5!white,colframe=green!75!black}{def}
+% \bmlRawHTML{
+% <style> 
+% #div1 {
+%   border-radius: 25px;
+%   background-color: #cceeff;
+%   padding: 20px; 
+
+% }
+
+% </style>
+% }
+
+% \iflatexml % for the HTML
+       
+% \else
+%     \newtcbtheorem[auto counter,number within=subsection]{example}%
+%       {Example}{fonttitle=\bfseries\upshape, colback=blue!5!white,colframe=blue!75!black}{ex}
+    
+%     \newtcbtheorem[auto counter,number within=subsection]{definition}%
+%       {Definition}{fonttitle=\bfseries\upshape, fontupper=\slshape, colback=green!5!white,colframe=green!75!black}{def}
+% \fi
 
 \ifcsname omitSolutions\endcsname
   \excludecomment{solution}
 \else
     \iflatexml % for the HTML
         \newenvironment{solution}{
-            \tcbline
+            % \tcbline
             \<details>\<summary>Solution.\</summary>}
             {\</details>}
     \else      % for the PDF
         \newenvironment{solution}{
-        \tcbline
+        % \tcbline
         {\bf Solution:}}{}
     \fi
 \fi
