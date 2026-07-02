@@ -36,17 +36,15 @@
 \else
     \iflatexml % for the HTML
         \newenvironment{sol}{
-            % \tcbline
-            \par\<details>\<summary><b>Solution.</b>\</summary>\<p>}
+            \<details>\<summary>\<b>Solution.\</b>\</summary>\<p>}
             {\</p>\</details>}
     \else      % for the PDF
         \newenvironment{sol}{
-        % \tcbline
-        \par{\bf{Solution.}}}{}
+        {\bf{Solution.}}}{}
     \fi
 
     %Box for solutions
-    \definecolor{solcol}{RGB}{252, 255, 252}
+    \definecolor{solcol}{RGB}{230, 255, 241}
     \definecolor{solframecol}{RGB}{32, 116, 44}
     \newsavebox{\solbox}
     \newenvironment{solution}
@@ -56,14 +54,14 @@
        \begin{sol}}
       {\end{sol}\end{minipage}\end{lrbox}%
        \begin{center}
-       \setlength{\fboxrule}{2pt}
+       \setlength{\fboxrule}{3pt}
        \setlength{\fboxsep}{8pt}
        \fcolorbox{solframecol}{solcol}{\usebox{\solbox}}
        \end{center}}
 \fi
 
 %box for learning outcomes
-\definecolor{locol}{RGB}{251, 254, 255}
+\definecolor{locol}{RGB}{230, 241, 255}
 \definecolor{loframecol}{RGB}{46, 66, 136}
 \newsavebox{\lobox}
 \newenvironment{learningoutcomes}
@@ -78,7 +76,7 @@
    \end{center}}
 
 %box for definitions
-\definecolor{defcol}{RGB}{245, 245, 245}
+\definecolor{defcol}{RGB}{230, 230, 230}
 \newsavebox{\defbox}
 \newenvironment{definition}
   {\begin{lrbox}{\defbox}%
