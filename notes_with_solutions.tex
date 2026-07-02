@@ -58,12 +58,7 @@
 \iflatexml % for the HTML
     \newenvironment{learningoutcomes}{
         \<div class="lo-box">
-            \<div class="lo-box-title">
-                Learning Outcomes
-            \</div>
-            \<div class="box-content">
-        }        
-        {\</div>\</div>}
+            \<div class="lo-box-title"> Learning Outcomes\</div>\<div class="box-content">}{\</div>\</div>}
 \else      % for the PDF
     \newenvironment{learningoutcomes}{
     \bgroup\colorlet{TFFrameColor}{loframecol}\colorlet{TFTitleColor}{white}\begin{titled-frame}{Learning Outcomes}}{\end{titled-frame}\egroup} 
@@ -73,8 +68,8 @@
 %box for definitions
 \iflatexml % for the HTML
     \newenvironment{definition}{
-            \<div class="def-box"> \<div class="box-content">\begin{defn}}        
-            {\end{defn} \</div> \</div>}
+            \<div class="def-box"> \begin{defn}}        
+            {\end{defn} \</div>}
 \else      % for the PDF
     \newsavebox{\defbox}
     \newenvironment{definition}
