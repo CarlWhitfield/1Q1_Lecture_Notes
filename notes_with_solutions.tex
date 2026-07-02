@@ -1,4 +1,4 @@
-\documentclass[11pt]{amsart}
+\documentclass[11pt]{article}
 
 
 
@@ -13,46 +13,61 @@
 \usepackage{lmodern}
 % title and author
 \usepackage{graphicx} % Required for inserting images
-\usepackage{fullpage}
+\usepackage[margin=1in]{geometry}
 \usepackage{setspace}
 \usepackage{tikz,lipsum,lmodern}
-\usepackage[most]{tcolorbox}
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{amsthm}
 \usepackage{enumerate}
 \usepackage{bookml/bookml}
 \usepackage{comment}
-
+\usepackage{xcolor}
 \onehalfspacing
 \setlength{\parindent}{0pt}
 \numberwithin{equation}{subsection}
 
-\newtheorem{example}{Example}
-\numberwithin{example}{subsection}
-\newtheorem{definition}{Definition}
-\numberwithin{definition}{subsection}
+\newtheorem{defn}{Definition}[subsection]
+\theoremstyle{definition} 
+\newtheorem{ex}{Example}[subsection]
 
-% \bmlRawHTML{
-% <style> 
-% #div1 {
-%   border-radius: 25px;
-%   background-color: #cceeff;
-%   padding: 20px; 
+%Box for examples
+\definecolor{excol}{RGB}{249, 252, 255}
+\definecolor{exframecol}{RGB}{46, 66, 136}
+\newsavebox{\exbox}
+\newenvironment{example}
+  {\begin{lrbox}{\exbox}%
+   \begin{minipage}{\dimexpr\columnwidth-2\fboxsep\relax}
+   \setlength{\parindent}{0pt}
+   \begin{ex}}
+  {\end{ex}\end{minipage}\end{lrbox}%
+   \begin{center}
+   \setlength{\fboxrule}{2pt}
+   \setlength{\fboxsep}{8pt}
+   \fcolorbox{exframecol}{excol}{\usebox{\exbox}}
+   \end{center}}
 
-% }
+%box for definitions
+\definecolor{defcol}{RGB}{252, 255, 252}
+\definecolor{defframecol}{RGB}{32, 116, 44}
+\newsavebox{\defbox}
+\newenvironment{definition}
+  {\begin{lrbox}{\defbox}%
+   \begin{minipage}{\dimexpr\columnwidth-2\fboxsep\relax}
+   \setlength{\parindent}{0pt}
+   \begin{defn}}
+  {\end{defn}\end{minipage}\end{lrbox}%
+   \begin{center}
+   \setlength{\fboxrule}{2pt}
+   \setlength{\fboxsep}{8pt}
+   \fcolorbox{defframecol}{defcol}{\usebox{\defbox}}
+   \end{center}}
 
-% </style>
-% }
 
-% \iflatexml % for the HTML
-       
-% \else
-%     \newtcbtheorem[auto counter,number within=subsection]{example}%
-%       {Example}{fonttitle=\bfseries\upshape, colback=blue!5!white,colframe=blue!75!black}{ex}
-    
-%     \newtcbtheorem[auto counter,number within=subsection]{definition}%
-%       {Definition}{fonttitle=\bfseries\upshape, fontupper=\slshape, colback=green!5!white,colframe=green!75!black}{def}
-% \fi
+% {\begin{lrbox}{\mybox}\begin{minipage}{0.9\textwidth}\begin{ex}}
+% {\end{ex}\end{minipage}\end{lrbox}\fbox{\usebox{\mybox}}}
+
+
 
 \ifcsname omitSolutions\endcsname
   \excludecomment{solution}
@@ -60,12 +75,12 @@
     \iflatexml % for the HTML
         \newenvironment{solution}{
             % \tcbline
-            \<details>\<summary>Solution.\</summary>}
-            {\</details>}
+            \<details>\<summary><b>Solution.</b>\</summary>\<p>}
+            {\</p>\</details>}
     \else      % for the PDF
         \newenvironment{solution}{
         % \tcbline
-        {\bf Solution:}}{}
+        {\bf{Solution.}}}{}
     \fi
 \fi
 
