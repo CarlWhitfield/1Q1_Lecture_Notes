@@ -1,0 +1,86 @@
+\textbf{Seats}
+\begin{enumerate}
+    \item 5 mins: Intro slides \par
+    \item 10 mins: Finish Example 3.4.5 \par
+    \textbf{Motivation}
+    \item 20 mins: Finish Example 3.4.6 \par
+    \textbf{Check piazza}
+    \item 35 mins: Finish Example 3.5.1 \par
+    \textbf{Check piazza}
+    \item 45 mins: Finish Example 3.5.2 \par
+    \textbf{Check piazza}
+    \item 50 mins: Wrap up \par
+\end{enumerate}
+\textbf{Seats}
+
+\vspace{10mm}
+\textbf{Example 3.4.5}
+
+Picking up from 3.3.3 we have
+\begin{align*}
+    \int_0^1 x e^x \, {\rm d}x &= [x e^x]_0^1 - \int_0^1 e^x \, {\rm d} x\\
+    &= [x e^x - e^x]_0^1 = e - e + 1 = 1
+\end{align*}
+
+\vspace{10mm}
+\textbf{Example 3.4.6}
+
+Partial fractions
+\begin{align*}
+    \frac{x+17}{(x+3)(2x-1)} &= \frac{A}{x+3} + \frac{B}{2x-1} \\
+    \therefore \; x+17 &= A(2x-1) + B(x+3)
+\end{align*}
+Set $x = 1/2$, $7B/2 = 35/2$, so $B = 5$.
+Set $x = -3$, $-7A = 14$, so $A = -2$. Therefore
+\begin{align*}
+    \frac{x+17}{(x+3)(2x-1)} &= \frac{-2}{x+3} + \frac{5}{2x-1} \\
+\end{align*}
+Now integrate
+\begin{align*}
+    \int \frac{-2}{x+3} \, {\rm d}x &= -2\ln (x+3) + c_1\\
+    \int \frac{5}{2x-1} \, {\rm d}x &= \frac{5}{2} \ln(2x-1) + c_2
+\end{align*}
+So 
+\begin{align*}
+\int \frac{x+17}{(x+3)(2x-1)} \, {\rm d}x = -2\ln (x+3) + \frac{5}{2} \ln(2x-1) + C
+\end{align*}
+
+\vspace{10mm}
+\textbf{Example 3.5.1}
+
+First integral
+\begin{align*}
+    c_0 \int_0^l \int_0^l 1 \, {\rm d} x \, {\rm d} y = c_0 \int_0^l [x]_0^l \, {\rm d} y &= c_0 l \int_0^l 1 \, {\rm d} y\\
+    &= c_0 l[y]_0^l = c_0 l^2\\
+\end{align*}
+Second integral
+\begin{align*}
+    12 c_0 \int_0^l \int_0^l xy(1-x) \, {\rm d} x \, {\rm d} y &= 2 c_0 \int_0^l y \int_0^l (x-x^2) \, {\rm d} x \, {\rm d} y\\
+    &= 12 c_0 \int_0^l y \left[\frac{x^2}{2} - \frac{x^3}{3} \right]_0^l \, {\rm d} y\\
+    &= 12 c_0 \left(\frac{l^2}{2} - \frac{l^3}{3}\right) \int_0^l y \, {\rm d} y\\
+    &= 12 c_0 \left(\frac{l^2}{2} - \frac{l^3}{3}\right) \left[\frac{y^2}{2}\right]_0^l \\
+    &= 12c_0 \frac{l^2}{2} \left(\frac{l^2}{2} - \frac{l^3}{3}\right)
+\end{align*}
+So $D = Fh \int_0^l \int_0^l c(x,y) \, {\rm d} x \, {\rm d} y $ for $l=1$ [cm], $h=0.04$ [cm], $F=2.5$ [mol/s] and $c_0 = 10^{4}$ mol/cm$^3$. Therefore, integral 1 gives
+\begin{align*}
+D &= Fhc_0l^2 = 10^{-5} \\
+D &= 12Fhc_0 frac{l^2}{2} \left(\frac{l^2}{2} - \frac{l^3}{3}\right) = 10^{-5} 
+\end{align*}
+So, the same.
+
+\vspace{10mm}
+\textbf{Example 3.5.2}
+
+\begin{align*}
+    \int_{-\pi}^\pi \int_0^1 (x^2 + 2x - 1) \cos \left(\frac{y}{2} \right)\, {\rm d} x \, {\rm d} y &= \int_{-\pi}^\pi \cos \left(\frac{y}{2} \right) \left[ \frac{x^3}{3} + x^2 - x\right]_0^1  \, {\rm d} y\\
+    &= \frac{1}{3}  \int_{-\pi}^\pi \cos \left(\frac{y}{2} \right) \, {\rm d} y\\
+    &= \frac{1}{3} \left[2 \sin \left(\frac{y}{2}\right)\right]_{-\pi}^\pi\\
+    &= \frac{4}{3}
+\end{align*}
+Reversing the order gives
+\begin{align*}
+    \int_0^1 \int_{-\pi}^\pi (x^2 + 2x - 1) \cos \left(\frac{y}{2} \right) \, {\rm d} y \, {\rm d} x  &= \int_0^1 \left[2 \sin \left(\frac{y}{2}\right)\right]_{-\pi}^\pi (x^2 + 2x - 1)  \, {\rm d} x\\
+    &= 4 \int_0^1(x^2 + 2x - 1)  \, {\rm d} x\\
+    &= 4  \left[ \frac{x^3}{3} + x^2 - x\right]_0^1\\
+    &= \frac{4}{3}
+\end{align*}

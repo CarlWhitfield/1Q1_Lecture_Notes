@@ -1,0 +1,84 @@
+\textbf{Seats}
+\begin{enumerate}
+    \item 7 mins: Intro slides \par
+    \item 12 mins: Finish Example 6.3.2 \par
+    \textbf{Check piazza}
+    \item 25 mins: Finish Example 6.4.1 \par
+    \textbf{Check piazza}
+    \item 38 mins: Finish Example 6.5.1 \par
+    \textbf{Check piazza}
+    \item 48 mins: Finish Example 6.5.2 \par
+    \textbf{Check piazza}
+\end{enumerate}
+\textbf{Seats}
+
+\vspace{10mm}
+\textbf{Example 6.4.1}
+
+Divide top and bottom by $x$
+\begin{align*}
+\der{y}{x} &= \frac{x+2y}{2x-y} \\
+\der{y}{x} &= \frac{1+2y/x}{2-y/x}
+\end{align*}
+Making the substitution
+\begin{align*}
+v + x \der{v}{x} &= \frac{1+2v}{2-v} \\
+ x \der{v}{x} &=  \frac{1+2v}{2-v} - v \\
+ x \der{v}{x} &= \frac{v^2 + 1}{2-v} \\
+ \frac{2-v}{v^2 + 1} \der{v}{x} &= \frac{1}{x} \\
+ \int  \frac{2-v}{v^2 + 1} \, {\rm d} v &= \int  \frac{1}{x} \, {\rm d} x \\
+\end{align*}
+The LHS integral is
+\begin{align*}
+	 \int  \frac{2-v}{v^2 + 1} \, {\rm d} v &= \int \frac{2}{1 + v^2}  \, {\rm d} v - \int  \frac{v}{1 + v^2}  \, {\rm d} v \\
+	 &= 2\tan^{-1} v - \frac{1}{2} \ln |1 + v^2|
+\end{align*}
+where we can drop the absolute value operator as $1 + v^2$ is always positive. So, substituting $v=y/x$ back in
+\begin{align*}
+	2\tan^{-1} \left(\frac{y}{x}\right) - \frac{1}{2} \ln \left(1 + \frac{y^2}{x^2}\right) &= \ln|x| + c \\
+	2\tan^{-1} \left(\frac{y}{x}\right) &= \ln \left| x(1 + y^2/x^2)^{1/2} \right| + c \\
+	\exp\left[2 \tan^{-1} \left(\frac{y}{x}\right)\right] &= A\sqrt{x^2 + y^2} \, .
+\end{align*}
+Or, in plane polar coordinates
+\begin{align*}
+	e^{2\theta} = Ar \, ,
+\end{align*}
+for $A > 0$, which is in implicit form.
+
+\vspace{10mm}
+\textbf{Example 6.5.1}
+
+\begin{align*}
+	\der{y}{x} + 2y = x^2 e^{-2x} 
+\end{align*}
+So the IF is $e^{\int 2 \, {\rm d} x} = e^{2x}$ and so multiplying through
+\begin{align*}
+	e^{2x}\der{y}{x} + 2ye^{2x} &= x^2 \\ 
+	\der{}{x} \left(y e^{2x} \right) &= x^2 \, .
+\end{align*}
+Integrating
+\begin{align*}
+	y e^{2x} &= \frac{x^3}{3} + c \\
+	y &= \frac{x^3}{3}e^{-2x} + ce^{-2x}
+\end{align*}
+
+\vspace{10mm}
+\textbf{Example 6.5.2}
+
+\begin{align*}
+	t \der{z}{t} - 3tz &= 2 t^2 e^{3t} \\
+	\der{z}{t} - 3 z &= 2 t e^{3t} \,. 
+\end{align*}
+So the IF is $e^{\int -3 \, {\rm d} t} = e^{-3t}$ and so multiplying through
+\begin{align*}
+	\der{}{x} \left(e^{-3t} z \right) &= 2 t \, .
+\end{align*}
+Integrating
+\begin{align*}
+	e^{-3t} z  &= t^2 + C \\
+	z &= t^2 e^{3t} + C e^{3t} \, .
+\end{align*}
+When $t=0$, $z = C$ therefore $C=5$ and so the particular solution is
+\begin{align*}
+	z = (t^2 + 5) e^{3t}\, .
+\end{align*}

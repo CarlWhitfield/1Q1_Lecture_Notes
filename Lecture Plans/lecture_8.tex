@@ -1,0 +1,91 @@
+\textbf{Seats}
+\begin{enumerate}
+    \item 5 mins: Intro slides \par
+    \textbf{Motivation}
+    \item 20 mins: Finish Example 3.3.1 \par
+    \textbf{Check piazza}
+    \item 25 mins: Finish Example 3.3.2 \par
+    \textbf{Check piazza}
+    \item 35 mins: Finish Example 3.3.3 \par
+    \textbf{Check piazza}
+    \item 45 mins: Finish Example 3.3.4 \par
+    \textbf{Check piazza}
+    \item 50 mins: Wrap up \par
+\end{enumerate}
+\textbf{Seats}
+
+\vspace{10mm}
+\textbf{Example 3.3.1}
+
+First example
+\begin{align*}
+   \int_1^b \frac{1}{x^3} \, {\rm d}x &= \left[-\frac{1}{2x^2}\right]_1^b \\
+   &= \left[\frac{1}{2} - \frac{1}{2b^2}\right]
+\end{align*}
+Take the limit
+\begin{align*}
+    \lim_{b\rightarrow\infty} \left[\frac{1}{2} - \frac{1}{2b^2}\right] = \frac{1}{2}
+\end{align*}
+
+Second example
+\begin{align*}
+    \int_1^b \frac{x}{1+x^2} \, {\rm d}x &= \left[\frac{1}{2} \ln(1+x^2) \right]_1^b\\
+    &= \frac{1}{2}\left[\ln(1+b^2)-\ln 2 \right]
+\end{align*}
+Take the limit
+\begin{align*}
+    \lim_{b\rightarrow\infty} \frac{1}{2}\left[\ln(1+b^2)-\ln 2 \right] \rightarrow \infty
+\end{align*}
+
+\vspace{10mm}
+\textbf{Example 3.3.2}
+
+The function oscillates between $1/x^2$ and $-1/x^2$. Since $1/x^2$ converges to 1, the upper bounds are $-1$ and $1$.
+
+\vspace{10mm}
+\textbf{Example 3.3.3}
+
+\begin{align*}
+\int_b^1 \frac{1}{x^3} \, {\rm d}x &= \left[-\frac{1}{2x^2}\right]_b^1 \\
+   &= \left[-\frac{1}{2} + \frac{1}{2b^2}\right]
+\end{align*}
+Take the limit
+\begin{align*}
+    \lim_{b\rightarrow\infty} \left[-\frac{1}{2} + \frac{1}{2b^2}\right] \rightarrow \infty
+\end{align*}
+Second example.
+\begin{align*}
+    \int_b^1 \frac{1}{\sqrt{x}} \, {\rm d}x &= \left[2\sqrt{x}\right]_b^1 \\
+   &= 2\left[1 - \sqrt{b}\right]
+\end{align*}
+Take the limit
+\begin{align*}
+    \lim_{b\rightarrow\infty} 2\left[1 - \sqrt{b}\right] = 2
+\end{align*}
+
+\vspace{10mm}
+\textbf{Example 3.3.4}
+
+\begin{align*}
+\int_{-1}^1 \frac{1}{x^3} \, {\rm d}x = \int_{-1}^0 \frac{1}{x^3} \, {\rm d}x + \int_{0}^1 \frac{1}{x^3} \, {\rm d}x
+\end{align*}
+From Example 3.3.3 we know this does not converge.
+
+Second case
+\begin{align*}
+\int_{-1}^1 |x|^{-3/4}\, {\rm d}x &= \int_{-1}^0 |x|^{-3/4}\, {\rm d}x + \int_{0}^1 |x|^{-3/4}\, {\rm d}x \\
+&= 2 \int_{0}^1 x^{-3/4}\, {\rm d}x
+\end{align*}
+So
+\begin{align*}
+\int_{b}^1 x^{-3/4} &= \left[4x^{1/4} \right]_b^1 \\
+&= 4[1-b^{1/4}]
+\end{align*}
+Take the limit
+\begin{align*}
+\lim_{b->\infty} 4[1-b^{1/4}] = 4
+\end{align*}
+Therefore
+\begin{align*}
+\int_{-1}^1 |x|^{-3/4}\, {\rm d}x = 8
+\end{align*}

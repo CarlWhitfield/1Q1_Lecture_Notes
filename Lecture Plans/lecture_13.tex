@@ -1,0 +1,69 @@
+\textbf{Seats}
+\begin{enumerate}
+    \item 5 mins: Intro slides \par
+    \textbf{Motivation}
+    \item 20 mins: Finish Example 4.4.1 \par
+    \textbf{Check piazza}
+    \item 28 mins: Finish Example 4.4.2 \par
+    \textbf{Check piazza}
+    \item 42 mins: Finish Example 4.4.3 \par
+    \textbf{Check piazza}
+    \item 50 mins: Finish Example 4.4.4 \par
+\end{enumerate}
+\textbf{Seats}
+
+\newcommand{\vect}[1]{\underline{\mathbf{#1}}}
+
+\vspace{5mm} 
+\textbf{Example 4.4.1} \par
+
+The force magnitude is
+$I|\vect{l}||\vect{B}|=0.6$N. The direction is $\vect{i} \times (-\vect{j}) = -\vect{k}$. So,
+\begin{align*}
+    \vect{F} = -0.6\vect{k} \; {\rm N}.
+\end{align*}
+
+\vspace{5mm} 
+\textbf{Example 4.4.2} \par
+
+\begin{align*}
+\vect{a}\times\vect{b} = \begin{vmatrix}
+    \vect{i} & \vect{j} & \vect{k}\\
+    2 & -1 & 3\\
+    3 & 2 & -4
+\end{vmatrix} &= (4-6)\vect{i} + (9+8)\vect{j} + (4+3)\vect{k} \\
+&= -2\vect{i} + 17\vect{j} + 7\vect{k}
+\end{align*}
+
+\textbf{Example 4.4.3} \par
+
+First take the determinant from the previous question
+\begin{align*}
+\vect{a}\times\vect{b} = \begin{vmatrix}
+    \vect{i} & \vect{j} & \vect{k}\\
+    2 & -1 & 3\\
+    3 & 2 & -4
+\end{vmatrix} &= -2\vect{i} + 17\vect{j} + 7\vect{k}
+\end{align*}
+Now let's try multiplying different rows of it by $\alpha = 5$
+\begin{align*}
+(5\vect{a})\times\vect{b} = \begin{vmatrix}
+    \vect{i} & \vect{j} & \vect{k}\\
+    5\times2 & 5\times(-1) & 5\times3\\
+    3 & 2 & -4
+\end{vmatrix} &= 5\times(-2)\vect{i} + 5\times17\vect{j} + 5\times7\vect{k} \\
+&= 5 (\vect{a}\times\vect{b}) 
+\end{align*}
+Useful note $(5\vect{a})\times (5\vect{b}) = 25(\vect{a}\times\vect{b})$.
+
+\textbf{Example 4.4.4} \par
+
+\begin{align*}
+\vect{a}\times\vect{b} = \begin{vmatrix}
+    \vect{i} & \vect{j} & \vect{k}\\
+    2 & -1 & 3\\
+    -2 & 17 & 7
+\end{vmatrix} &= (-7-51)\vect{i} + (-6-14)\vect{j} + (34-2)\vect{k} = -58\vect{i} -20\vect{j} + 32\vect{k}
+\end{align*}
+So $|\vect{a}\times\vect{b}| = \sqrt{58^2+20^2+32^2} = \sqrt{4788} = 6\sqrt{133}$
+So triangle area $3\sqrt{133} \approx 34.6$.

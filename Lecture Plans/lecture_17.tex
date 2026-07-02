@@ -1,0 +1,88 @@
+\textbf{Seats}
+\begin{enumerate}
+    \item 5 mins: Intro slides \par
+    \item 20 mins: Finish Example 5.3.3 \par
+    \textbf{Check piazza}
+    \item 35 mins: Finish Example 5.3.4 \par
+    \textbf{Check piazza}
+    \item 50 mins: Finish Example 5.4.1 \par
+    \textbf{Check piazza}
+\end{enumerate}
+\textbf{Seats}
+
+\newcommand{\vect}[1]{\underline{\mathbf{#1}}}
+
+\vspace{5mm} 
+
+\textbf{Example 5.3.3} \par
+
+$z_1 = 3+4i$ and $z_2 = 5-5i$, converting them to polar form. The moduli are
+\begin{align*}
+r_1 &= \sqrt{3^2+4^2}=5 \\
+r_2 &= \sqrt{5^2+5^2}=\sqrt{50}
+\end{align*}
+The arguments are
+\begin{align*}
+\theta_1 &= \tan^{-1}\left(\frac{4}{3}\right) \approx
+0.927 \, ,\\
+\theta_2 &= \tan^{-1}\left(-1\right) = -\frac{\pi}{4} \, .
+\end{align*}
+So
+\begin{align*}
+    z_1 &\approx 5\left[\cos\left(0.927\right) + i \sin \left(0.927\right)\right] \\
+    z_2 &= \sqrt{50}\left[\cos\left(-\frac{\pi}{4}\right) + i \sin \left(-\frac{\pi}{4}\right)\right]
+\end{align*}
+and therefore
+\begin{align*}
+    z_1 z_2 &\approx 5 \sqrt{50} \left[\cos\left(0.142\right) + i \sin \left(0.142\right)\right] = 35.0 + 5.0 i \\
+    \frac{z_1}{z_2} &\approx \frac{1} \, ,{\sqrt{2}}\left[\cos\left(1.713\right) + i \sin \left(1.713\right)\right] = -0.10 + 0.70 i \, .
+\end{align*}
+
+Note in example 5.2.2 we found $z_1 z_2 = 35 + 5i$ and in 5.2.3 we found $z_1/z_2 = -\frac{1}{10} + \frac{7}{10}i$.
+
+\newpage
+\textbf{Example 5.3.4} \par
+
+Let's write $z=-\frac{1}{\sqrt{2}} + \frac{i}{\sqrt{2}}$, converting to polar form $r = 1$ and $\theta = 3\pi/4$, so
+\begin{align*}
+    z = e^{3\pi i/4} \, .
+\end{align*}
+Raising to the power $17$ gives $z = \exp(51\pi i/4) = \exp[(12\pi + 3\pi/4)i]$, which is the same as $\exp(3\pi i/4)$. Therefore,
+\begin{align*}
+\left(-\frac{1}{\sqrt{2}} + \frac{i}{\sqrt{2}}\right)^{17} = -\frac{1}{\sqrt{2}} + \frac{i}{\sqrt{2}} \, .
+\end{align*}
+
+\vspace{20mm}
+\textbf{Example 5.4.1} \par
+
+Write $-9$ is exponential form and keep adding $2\pi$
+\begin{align*}
+    -9 = 9e^{\pi i} = 9e^{3\pi i} = 9e^{-\pi i} = 9e^{-3\pi i} \,.
+\end{align*}
+Taking to the power $1/4$ we get
+\begin{align*}
+    -9^{1/4} = \sqrt{3} e^{\pi i/4} \; , \sqrt{3} e^{-\pi i/4} \; , \sqrt{3} e^{3\pi i/4} \; , \sqrt{3} e^{-3\pi i/4} \, .
+\end{align*}
+Converting back to standard form, we have the four solutions
+\begin{align*}
+    \sqrt{\frac{3}{2}} + \sqrt{\frac{3}{2}}i\\
+    \sqrt{\frac{3}{2}} - \sqrt{\frac{3}{2}}i\\
+    -\sqrt{\frac{3}{2}} + \sqrt{\frac{3}{2}}i\\
+    -\sqrt{\frac{3}{2}} - \sqrt{\frac{3}{2}}i\\
+\end{align*}
+
+\vspace{10mm}
+\textbf{Example 5.4.2} \par
+
+Since $z=1+i$ is a solution, and the polynomial has real coefficients, $\bar{z}=1-i$ is also a solution. Therefore
+\begin{align*}
+    (z-1-i)(z-1+i) = z^2-2z+2
+\end{align*}
+is a factor of the cubic. It follows that
+\begin{align*}
+    z^3 + 2z^2 - 6z + 8 = (z^2-2z+2)(z-a)
+\end{align*}
+where $a$ is the real solution. Comparing constant terms $-2a = 8$, so $a=-4$. So, the solutions are
+\begin{align*}
+    z = 1+i \; , \; 1-i \; , \; {\rm and} \; -4 \,
+\end{align*}

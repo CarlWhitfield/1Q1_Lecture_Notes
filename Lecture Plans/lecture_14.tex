@@ -1,0 +1,125 @@
+\textbf{Seats}
+\begin{enumerate}
+    \item 2 mins: Intro slides \par
+    \textbf{Motivation}
+    \item 10 mins: Finish Example 4.5.1 \par
+    \textbf{Check piazza}
+    \item 22 mins: Finish Example 4.5.2 \par
+    \textbf{Check piazza}
+    \item 35 mins: Finish Example 4.6.1 \par
+    \textbf{Check piazza}
+    \item 45 mins: Finish Example 4.6.2 \par
+    \textbf{Check piazza}
+    \item 50 mins: Finish Example 4.6.3 \par
+\end{enumerate}
+\textbf{Seats}
+
+\newcommand{\vect}[1]{\underline{\mathbf{#1}}}
+
+\vspace{5mm} 
+\textbf{Example 4.5.1} \par
+
+(a) \begin{align*}
+    \vect{r} &= \begin{pmatrix} 2 \\ 1 \\ 5 \end{pmatrix} + \lambda \left[\begin{pmatrix} 4 \\ 3 \\ -2 \end{pmatrix} - \begin{pmatrix} 2 \\ 1 \\ 5 \end{pmatrix}\right]\\
+    &= \begin{pmatrix} 2 \\ 1 \\ 5 \end{pmatrix} + \lambda\begin{pmatrix} 2 \\ 2 \\ -7 \end{pmatrix}
+\end{align*}
+
+(b) By setting 
+\begin{align*}
+    \vect{r} = \begin{pmatrix} x \\ y \\ z \end{pmatrix} = \begin{pmatrix} 2 \\ 1 \\ 5 \end{pmatrix} + \lambda\begin{pmatrix} 2 \\ 2 \\ -7 \end{pmatrix}
+\end{align*}
+we have 
+\begin{align*}
+    x &= 2 + 2\lambda \\
+    y &= 1 + 2\lambda \\
+    z &= 5 - 7\lambda
+\end{align*}
+or
+\begin{align*}
+    \frac{x-2}{2} &= \lambda \\
+    \frac{y-1}{2} &= \lambda \\
+    \frac{z-5}{-7} &= \lambda.
+\end{align*}
+Therefore, 
+\begin{align*}
+    \frac{x-2}{2} = \frac{y-1}{2} = \frac{z-5}{7}
+\end{align*}
+
+\vspace{5mm} 
+
+\textbf{Example 4.5.2} \par
+
+\begin{align*}
+\vect{r}_1 &= \begin{pmatrix} 2 \\ -1 \\ 4 \end{pmatrix} + \lambda \begin{pmatrix} 1 \\ 2 \\ -1 \end{pmatrix}\\
+\vect{r}_2 = \begin{pmatrix} 5 \\ 2 \\ w \end{pmatrix} + \mu \begin{pmatrix} 1 \\ -1 \\ -3 \end{pmatrix}
+\end{align*}
+Setting these equal gives three simultaneous equations
+\begin{align*}
+2 + \lambda &= 5 + \mu \qquad (1)\\
+-1 + 2\lambda &= 2 - \mu \qquad (2)\\
+4 - \lambda &= w - 3\mu \qquad (3)
+\end{align*}
+Take, $(1) + (2)$ gives $1 + 3\lambda = 7$, so $\lambda = 2$. $2(1)-(2)$ gives $5 = 8 + 3\mu$, so $\mu = -1$. Finally, (3) then gives $2 = w+3$, so $w=-1$. 
+
+Therefore the crossing point is
+\begin{align*}
+\begin{pmatrix} 2 \\ -1 \\ 4 \end{pmatrix} + 2 \begin{pmatrix} 1 \\ 2 \\ -1 \end{pmatrix} &= \begin{pmatrix} 4 \\ 3 \\ 2 \end{pmatrix}\\
+\begin{pmatrix} 5 \\ 2 \\ -1 \end{pmatrix} + \begin{pmatrix} -1 \\ 1 \\ 3 \end{pmatrix} &= \begin{pmatrix} 4 \\ 3 \\ 2 \end{pmatrix}\\
+\end{align*}
+
+\textbf{Example 4.6.1} \par
+
+First find $\vect{b}\times\vect{c}$
+\begin{align*}
+\vect{b}\times\vect{c} = \begin{vmatrix}
+    \vect{i} & \vect{j} & \vect{k}\\
+    -1 & 0 & 5 \\
+    6 & -1 & 0
+\end{vmatrix} = 5\vect{i} + 30\vect{j} + \vect{k}\\
+\end{align*}
+So then
+\begin{align*}
+\vect{a} \cdot (\vect{b}\times\vect{c}) = \begin{pmatrix}
+    2 \\ 2 \\ -1
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+    5 \\ 30 \\ 1
+\end{pmatrix} = 10 + 60 - 1 = 69 \,.
+\end{align*}
+Determinant method
+\begin{align*}
+\vect{a} \cdot (\vect{b}\times\vect{c}) =  \begin{vmatrix}
+    2 & 2 & -1\\
+    -1 & 0 & 5 \\
+    6 & -1 & 0
+\end{vmatrix} = 2(5) + 2(30)  -1 = 69 \, .\\
+\end{align*}
+
+\textbf{Example 4.6.2} \par
+
+This is just 
+\begin{align*}
+\vect{a} \cdot (\vect{b}\times\vect{c}) =  \begin{vmatrix}
+    1 & 1 & 1\\
+    2 & 3 & 1 \\
+    4 & 0 & 7
+\end{vmatrix} = 21 + (4-14) -12 = -1 \, .\\
+\end{align*}
+So the volume is 1.
+
+\textbf{Example 4.6.3} \par
+
+Can just do this by saying $\vect{a}\times\vect{b}$ is perpendicular to $\vect{a}$ so $\vect{a}\cdot(\vect{a}\times\vect{b}) = 0$.
+
+In component form
+\begin{align*}
+\begin{vmatrix}
+    a_x & a_y & a_z\\
+    a_x & a_y & a_z \\
+    b_x & b_y & b_z
+\end{vmatrix} &= a_x(a_y b_z - a_z b_y) + a_y(a_z b_x - a_x b_z) + a_z (a_x b_y - a_y b_x) \\
+&= a_x a_y b_z - a_x b_y a_z + b_x a_y a_z - a_x a_y b_z + a_x b_y a_z - b_x a_y a_z\\
+&= 0
+\end{align*}
+The first and fourth, second and fifth, and third and sixth terms cancel.

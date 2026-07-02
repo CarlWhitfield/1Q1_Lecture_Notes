@@ -1,0 +1,287 @@
+\section{Differentiation}
+
+\subsection{Reminder of Basic Differentiation}
+
+Differentiating a function ($y = f(x)$) gives its \textbf{derivative} ($\mathrm{d}y/\mathrm{d}x = f'(x)$), which is the rate of change of $y$ with respect to $x$. Table \ref{tab:derivatives} shows the derivatives of some common functions.
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|} \hline
+    Function $y = f(x)$ & Derivative $dy/dx = f'(x)$ \\ \hline
+    $x^n$ & $nx^{n-1}$\\
+    $\ln x$ & $1/x$\\
+    $e^x$ & $e^x$\\
+    $\sin x$ & $\cos x$\\
+    $\cos x$ & $-\sin x$\\\hline
+    \end{tabular}
+    \caption{Some common functions and their derivatives}
+    \label{tab:derivatives}
+\end{table}
+
+Functions can be differentiated repeatedly. Differentiating the derivative of a function gives the \textbf{second derivative} $\mathrm{d}^2y/\mathrm{d}x^2 = f''(x)$.
+
+\newpage
+\subsection{Maxima and Minima}
+
+\subsubsection{Local Maxima and Minima}
+
+\begin{definition}
+    (stationary point). A point where $f'(x) = 0$ is a \textbf{stationary point}. The function has zero gradient, so at that point the tangent line to the curve is flat.
+\end{definition}
+
+A stationary point may be a local maximum or minimum, or it might be neither. Figure \ref{fig:stationary_points} demonstrates these possibilities for stationary points of the function $y=f(x)$. To find the stationary points we solve $f'(x) = 0$ for $x$, and to classify them we can apply either the \textbf{first derivative test} or the \textbf{second derivative test}.
+
+\begin{definition}
+    (the first derivative test). To use the first derivative test to classify a stationary point at $x=x_0$, first evaluate at two points either side of $x_0$, \emph{i.e.} $f'(x_0-h)$ and $f'(x_0+h)$ for small $h$. Drawing the line \textbackslash for a negative value, / for a positive value and -- for the stationary point itself forms a sketch of how the function looks around the stationary point. See table \ref{tab:first_deriv_test} for the possible classifications.
+\end{definition}
+
+\renewcommand{\arraystretch}{2.0}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|}\hline
+    $f(x_0-h)$ & $f(x_0+h)$ & Sketch & Classification \\ \hline 
+    $<0$  & $>0$ & \textbackslash$\underline{\phantom{x}}$/ & Minimum \\ \hline
+    $>0$  & $<0$ & /$\overline{\phantom{x}}$\textbackslash & Maximum \\ \hline
+    $<0$  & $<0$ & $\backslash \atop \phantom{x}$--$\phantom{x} \atop \backslash$ & Falling inflection point \\ \hline
+    $>0$  & $>0$ & $\phantom{x} \atop /$--$/ \atop \phantom{x}$ & Rising inflection point \\ \hline
+    \end{tabular}
+    \caption{Classifications of stationary points using the first derivative test.}
+    \label{tab:placeholder}
+\end{table}
+
+It is important to note that the first derivative test relies on being able to choose a suitably small $h$. Specifically, $x_0$ should be the only stationary point between $x_0-h$ and $x_0 + h$.
+
+\begin{definition}
+    (the second derivative test). To use the second derivative test to classify a stationary point at $x=x_0$, evaluate the second derivative at the point $f''(x_0)$.
+    \begin{itemize}
+        \item If $f''(x) > 0$, the point is a minimum.
+        \item If $f''(x) < 0$, the point is a maximum.
+        \item If $f''(x) = 0$, the test is inconclusive.
+    \end{itemize}
+\end{definition}
+
+The second derivative test is often quicker and easier to apply than the first derivative test, but if it is inconclusive then fall back on the first derivative test to classify the stationary point.
+
+\begin{example}
+    Find any stationary points for the function
+    \begin{align*}
+        f(x) = 2x^3 - 9x^2 + 5.
+    \end{align*}
+    Use the first derivative test to classify them as maxima, minima or points of inflection. Check this using the second derivative test.
+\end{example}
+The derivative of the function is $f'(x) = x(6x - 18)$, and so $f'(x) = 0$ for the stationary points $x=0$ and $x=3$. To use the first derivative test, we choose $h=1$ (as this is a small enough step to not cross another stationary point, but also makes the arithmetic simple).
+\begin{itemize}
+    \item Around $x = 0$ we have $f'(-1) = 24 > 0$ and $f'(1)=-12<0$. Therefore our sketch is /$\overline{\phantom{x}}$\textbackslash, and so the point is a maximum.
+    \item Around $x = 3$ we have $f'(2) = -12 < 0$ and $f'(4)=24>0$. Therefore our sketch is \textbackslash$\underline{\phantom{x}}$/, and so the point is a minimum.
+\end{itemize}
+We can check this using the second derivative test. Differentiating the function again we get $f''(x) = 12x - 18$. Evaluating at the first stationary point gives $f''(0) = -18 < 0$, confirming that this point is a maximum. At the second stationary point $f''(3) = 18 > 0$, confirming that this point is a minimum.
+
+\subsubsection{Maximum and Minimum Values over an Interval}
+
+The highest and lowest values of a function over an interval is not necessarily a stationary point. As demonstrated in figure \ref{fig:min-max-interval}, a function may continue rising or falling beyond the value of the local maxima and minima, in which case the extreme values will be at the limits of the interval. Also, there may be discontinuities or asymptotes in the function where the value exceeds these limits. 
+
+\begin{definition}
+    (points where highest/lowest values of a function can occur) To find the global maxima or minima over an interval, the value of the function at all instances of the following points needs to be checked
+    \begin{itemize}
+        \item Stationary points
+        \item The limits of the interval
+        \item Where $f(x)$ becomes infinite for finite $x$
+        \item Where $f(x)$ or $f'(x)$ does not exist
+        \item As $x$ becomes infinite (positive or negative), if the interval is open
+    \end{itemize}
+\end{definition}
+
+\begin{example}
+Find the maximum and minimum values of the function
+\begin{align*}
+    p(x) = 2x^3 -3x^2 -36x + 13
+\end{align*}    
+on the interval $-4 \leq x \leq 6$.
+\end{example}
+First, we find the stationary points by solving $p'(x) = 0$. Differentiating gives $p'(x) = 6x^2-6x-36 = 6(x-3)(x+2)$, meaning there are stationary points at $x = \{-2,3\}$. The second derivative is $p''(x)=12x-6$, evaluating at the stationary points gives $p''(-2)<0$ and $p''(3)>0$, therefore $x=-2$ is a local maximum and $x=3$ is a local minimum. 
+
+There are no discontinuities in $p(x)$ or values where $p(x)\rightarrow 0$, so the only other points to check are the limits of the interval. Evaluating the function there gives $p(-4) = 2(-64) - 3(16) - 36(-4) + 13 = -19$ and $p(6) = 2(216)-3(36)-36(6)+13=121$. To find out whether these are the maximum or minimum values over the interval, we need to compare to the function values at the critical points. At the local maximum $x=-2$, $p(-2) = 2(-8)-3(4)-36(-2)+13=57$, and at the local minimum $x=3$, $p(3) = 2(27)-3(9)-36(3)+13=-68$.
+
+Therefore, the minimum of $p(x)$ over the interval $-4 \leq x \leq 6$ occurs at the stationary point $x=3$, where the function takes the value $p(3) = -68$. The maximum occurs at the upper limit of the interval $x=6$, where $p(6) = 121$.
+
+\newpage
+\subsection{The Chain, Product, and Quotient Rules}
+
+\subsubsection{The Chain Rule}
+
+\begin{definition}
+    (the chain rule). Given a function of the form $f(x)=h(u)$ where $u=g(x)$,  then the chain rule states
+\begin{align}
+    \frac{\mathrm{d}f}{\mathrm{d}x} = \frac{\mathrm{d}u}{\mathrm{d}h} \times \frac{\mathrm{d}g}{\mathrm{d}x}
+\end{align}
+or equivalently $f'(x)=h'(u)g'(x)$. 
+\end{definition}
+
+In other words, if $f$ here is a \textbf{function of a function} of $x$, and we define
+\begin{itemize}
+    \item The \textbf{inner function} as $u=g(x)$, the one that acts directly on $x$,
+    \item The \textbf{outer function} is $h(u)$, the one that acts on $u$.
+\end{itemize}
+Then, the derivative of $f$ with respect to $x$ is the derivative of the \textit{outer} function with respect to the \textit{inner} function, multiplied by the derivative of the \textit{inner} function with respect to $x$. 
+
+\begin{example}
+    Differentiate
+    \begin{align*}
+        p(t) = (t^2+1)^3
+    \end{align*}
+\begin{enumerate}[(i)]
+    \item by expanding the brackets
+    \item using the chain rule
+\end{enumerate}
+\end{example}
+
+(i) Expanding the brackets gives 
+\begin{align*}
+    p(t) &= (t^2+1)(t^2+1)(t^2+1)\\
+    &= t^6+3t^4+3t^4+1.
+\end{align*} 
+Differentiating this polynomial with respect to $t$ gives 
+\begin{align*}
+    p'(t) = 6t^5 + 12t^3 + 6t,
+\end{align*}
+which we can simplify to
+\begin{align*}
+p'(t) &= 6t(t^4+2t^2+1)\\
+&=6t(t^2+1)^2
+\end{align*}
+through factorisation.\\
+
+(ii) Define the inner function as $u=g(t)=t^2+1$, and so the outer function is $p=h(u)=u^3$. Differentiating these functions we get 
+\begin{align*}
+    h'(u)=3u^2 \qquad \mathrm{and} \qquad g'(t)=2t.
+\end{align*} 
+Using the chain rule and substituting in these expressions gives
+\begin{align*}
+    p'(t) &= 3u^2 \times 2t \\
+    &= 6t(t^2+1)^2,
+\end{align*}
+where in the final step we substituted in the expression for $u$.
+
+\begin{example}
+    Differentiate
+    \begin{align*}
+        q(x) = \ln[\sin(x^2+3)]
+    \end{align*}
+\end{example}
+
+Here $q(x)$ is a function of a function of a function, so we will need to apply the chain rule twice. First, let's just consider the function inside the logarithm,  $f(x) = \sin(x^2+3)$, and define $u=g(x)=x^2+3$ as the innermost function, such that $f = h(u)= \sin u$. Then, using the chain rule we have
+\begin{align*}
+    f'(x) &= g'(x) h'(u) \\
+    &= 2x \cos u\\
+    &= 2x \cos(x^2+3).
+\end{align*}
+Now consider the outer function $q = p(v) =\ln v$ where $v=f(x)$. Applying the chain rule again we find
+\begin{alignat*}{2}
+    q'(x) &= p'(v) f'(x)\\
+         &= \frac{1}{v} 2x \cos(x^2+3) \qquad\qquad &&[\mathrm{taking\;the\;derivatives}] \\
+         &= \frac{2x \cos(x^2+3)}{\sin(x^2+3)} \qquad\qquad &&[\mathrm{substituting\;in\;}v]\\
+        &= 2x \cot(x^2+3)  \qquad\qquad &&[\mathrm{simplifying}].
+\end{alignat*}
+
+Note, if the inner function is linear, \textit{i.e.} $g(x)=ax+b$, then $g'(x)=a$. Therefore, in this special case, we can use the useful shorthand $f'(x) = ah'(ax+b)$. 
+
+\begin{example}
+    Differentiate
+    \begin{align*}
+        r(x)=\cos(5x-\pi)
+    \end{align*}
+    using the chain rule.
+\end{example}
+
+Note that $5x-\pi$ is a linear function, and so we can use the rule introduced above. The derivative of $h(u) = \cos u$ is $h'(u) = -\sin u$, and therefore the solution is
+\begin{align*}
+    r'(x) = -5\sin(5x-\pi).
+\end{align*}
+
+\subsubsection{The Product Rule}
+
+\begin{definition}
+    (the product rule). Given functions $u(x)$ and $v(x)$, the product rule states
+    \begin{align}
+        \label{product} \frac{\mathrm{d}}{\mathrm{d}x} (u\cdot v)= u\frac{\mathrm{d}v}{\mathrm{d}x} + v\frac{\mathrm{d}u}{\mathrm{d}x}.
+    \end{align}
+\end{definition}
+
+Therefore, if we have a function of the form $f(x)=u(x)v(x)$, then, by the product rule, its derivative is $f'(x)=u(x)v'(x)+u'(x)v(x)$. Note that the order of the functions $u(x)$ and $v(x)$ is not important, they are interchangeable in the definition.
+
+\begin{example}
+    Differentiate
+    \begin{align*}
+        g(x) = 3x^2 \ln x
+    \end{align*}
+    using the product rule.
+\end{example}
+
+Let's define $u(x) = 3x^2$ and $v(x) = \ln x$ (remember, the order is unimportant). Therefore, $u'(x) = 6x$ and $v'(x) = 1/x$. Using the product rule we get
+\begin{align*}
+    g'(x) &= u(x)v'(x)+u'(x)v(x) \\
+    &= 3x^2 / x + 6x \ln x \\
+    &= 3x (1 + 2\ln x).
+\end{align*}
+
+\begin{example}
+    Differentiate
+    \begin{align*}
+        h(t)=te^{t^2}
+    \end{align*}
+    using the product rule.
+\end{example}
+
+Define $u(t)=t$ and $v(t)=e^{t^2}$. The derivative of $u$ is just $u'(t)=1$. To differentiate $v$, we use the chain rule to get $v'(t) = 2t e^{t^2}$. Then, using the product rule
+\begin{align*}
+    h'(t) &= u(t)v'(t)+u'(t)v(t) \\
+    &= t \times 2te^{t^2} + 1\times e^{t^2} \\
+    &= (1+2t^2)e^{t^2}.
+\end{align*}
+
+The product rule generalises to three (or more) functions multiplied together. Consider $f(x) = u(x)v(x)w(x)$, we can first make the substitution $s(x) = v(x)w(x)$. Then, using the product rule 
+\begin{align*}
+    f'(x) &= u(x)s'(x) + u'(x)s(x)
+\end{align*}
+We can also apply the product rule to differentiate $s(x)$ to get $s'(x) = v(x)w'(x) + v'(x)w(x)$. Substituting this and the expression for $s(x)$ into $f'(x)$ gives
+\begin{align*}
+    f'(x) &= u(x)[v(x)w'(x)+v'(x)w(x)] + u'(x)v(x)w(x)\\
+        &= u(x)v(x)w'(x) + u(x)v'(x)w(x) + u'(x)v(x)w(x). 
+\end{align*}
+So, we see that the derivative of the product of multiple functions can be calculated by differentiating each function in turn, multiplying it by the other functions, and then adding all products together.
+
+\begin{example}
+    Differentiate
+    \begin{align*}
+        g(x) = x^2 e^x \sin x
+    \end{align*}
+    using the product rule.
+\end{example}
+
+Here $g(x)$ is a product of three functions of $x$, so let's define $u(x)=x^2$, $v(x)=e^x$, and $w(x)=\sin x$. Differentiating each we have $u'(x)=2x$, $v'(x)=e^x$, and $w'(x)=\sin x$. Now, we multiply each of these by the other two functions, then take the sum of all three products
+\begin{align*}
+    g'(x) &= u(x)v(x)w'(x) + u(x)v'(x)w(x) + u'(x)v(x)w(x) \\
+    &= x^2 e^x \cos x + x^2 e^x \sin x + 2x e^x \sin x \\
+    &= xe^x(x \cos x + x \sin x + 2\sin x).
+\end{align*}
+
+\subsubsection{The Quotient Rule}
+
+\begin{definition}
+    (the quotient rule). Given functions $u(x)$ and $v(x)$, the quotient rule states
+    \begin{align*}
+        \frac{\mathrm{d}}{\mathrm{d}x} \left(\frac{u}{v}\right)= \frac{1}{v^2}\left[v\frac{\mathrm{d}u}{\mathrm{d}x} - u\frac{\mathrm{d}v}{\mathrm{d}x}\right].
+    \end{align*}
+\end{definition}
+
+Note we can derive this directly using the product and chain rules. If we define $g = v^{-1}$, then by the chain rule $g' = -v'/v^2$. Defining $f = u \cdot g$ and substituting this into the product rule (equation \eqref{product}) we get
+\begin{align*}
+    f' &= u'g + ug'\\
+       &= \frac{u'}{v} -\frac{uv'}{v^2}  \\
+       &= \frac{u'v - uv'}{v^2}.
+\end{align*}
+This is helpful if, like me, you have trouble remembering which term has the minus sign! Unlike the product rule, it is now crucial which function is $u$ and which is $v$.
+
+\begin{example}
+    
+\end{example}
