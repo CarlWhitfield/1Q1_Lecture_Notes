@@ -14,7 +14,6 @@
 % title and author
 \usepackage{graphicx} % Required for inserting images
 \usepackage[margin=1in]{geometry}
-\usepackage{setspace}
 \usepackage{tikz,lipsum,lmodern}
 \usepackage{amssymb}
 \usepackage{amsmath}
@@ -23,33 +22,63 @@
 \usepackage{bookml/bookml}
 \usepackage{comment}
 \usepackage{xcolor}
-\onehalfspacing
+
 \setlength{\parindent}{0pt}
 \numberwithin{equation}{subsection}
 
-\newtheorem{defn}{Definition}[subsection]
+\newtheorem{example}{Example}[subsection]
 \theoremstyle{definition} 
-\newtheorem{ex}{Example}[subsection]
+\newtheorem{defn}{Definition}[subsection]
 
-%Box for examples
-\definecolor{excol}{RGB}{249, 252, 255}
-\definecolor{exframecol}{RGB}{46, 66, 136}
-\newsavebox{\exbox}
-\newenvironment{example}
-  {\begin{lrbox}{\exbox}%
+
+\ifcsname omitSolutions\endcsname
+  \excludecomment{solution}
+\else
+    \iflatexml % for the HTML
+        \newenvironment{sol}{
+            % \tcbline
+            \par\<details>\<summary><b>Solution.</b>\</summary>\<p>}
+            {\</p>\</details>}
+    \else      % for the PDF
+        \newenvironment{sol}{
+        % \tcbline
+        \par{\bf{Solution.}}}{}
+    \fi
+
+    %Box for solutions
+    \definecolor{solcol}{RGB}{252, 255, 252}
+    \definecolor{solframecol}{RGB}{32, 116, 44}
+    \newsavebox{\solbox}
+    \newenvironment{solution}
+      {\begin{lrbox}{\solbox}%
+       \begin{minipage}{\dimexpr\columnwidth-2\fboxsep\relax}
+       \setlength{\parindent}{0pt}
+       \begin{sol}}
+      {\end{sol}\end{minipage}\end{lrbox}%
+       \begin{center}
+       \setlength{\fboxrule}{2pt}
+       \setlength{\fboxsep}{8pt}
+       \fcolorbox{solframecol}{solcol}{\usebox{\solbox}}
+       \end{center}}
+\fi
+
+%box for learning outcomes
+\definecolor{locol}{RGB}{251, 254, 255}
+\definecolor{loframecol}{RGB}{46, 66, 136}
+\newsavebox{\lobox}
+\newenvironment{learningoutcomes}
+  {\begin{lrbox}{\lobox}%
    \begin{minipage}{\dimexpr\columnwidth-2\fboxsep\relax}
-   \setlength{\parindent}{0pt}
-   \begin{ex}}
-  {\end{ex}\end{minipage}\end{lrbox}%
+   \setlength{\parindent}{0pt}{\bf Learning Outcomes}\par}
+  {\end{minipage}\end{lrbox}%
    \begin{center}
    \setlength{\fboxrule}{2pt}
    \setlength{\fboxsep}{8pt}
-   \fcolorbox{exframecol}{excol}{\usebox{\exbox}}
+   \fcolorbox{loframecol}{locol}{\usebox{\lobox}}
    \end{center}}
 
 %box for definitions
-\definecolor{defcol}{RGB}{252, 255, 252}
-\definecolor{defframecol}{RGB}{32, 116, 44}
+\definecolor{defcol}{RGB}{245, 245, 245}
 \newsavebox{\defbox}
 \newenvironment{definition}
   {\begin{lrbox}{\defbox}%
@@ -58,9 +87,8 @@
    \begin{defn}}
   {\end{defn}\end{minipage}\end{lrbox}%
    \begin{center}
-   \setlength{\fboxrule}{2pt}
    \setlength{\fboxsep}{8pt}
-   \fcolorbox{defframecol}{defcol}{\usebox{\defbox}}
+   \colorbox{defcol}{\usebox{\defbox}}
    \end{center}}
 
 
@@ -69,20 +97,7 @@
 
 
 
-\ifcsname omitSolutions\endcsname
-  \excludecomment{solution}
-\else
-    \iflatexml % for the HTML
-        \newenvironment{solution}{
-            % \tcbline
-            \<details>\<summary><b>Solution.</b>\</summary>\<p>}
-            {\</p>\</details>}
-    \else      % for the PDF
-        \newenvironment{solution}{
-        % \tcbline
-        {\bf{Solution.}}}{}
-    \fi
-\fi
+
 
 
 % \includeonly{section_2}
