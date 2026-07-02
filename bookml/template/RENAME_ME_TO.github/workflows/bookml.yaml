@@ -1,0 +1,14 @@
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      # see https://github.com/vlmantova/bookml-action for all configuration options
+      - name: Compile with BookML
+        uses: vlmantova/bookml-action@v1
+        with:
+          # scheme can be basic, small, medium, full
+          scheme: full
+          timeout-minutes: 6

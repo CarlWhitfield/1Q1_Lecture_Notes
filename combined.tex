@@ -1,10 +1,11 @@
-\documentclass{article}
+\documentclass{book}
 \usepackage{graphicx} % Required for inserting images
 \usepackage{fullpage}
 \usepackage{setspace}
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{enumerate}
+\usepackage{bookml/bookml}
 
 \onehalfspacing
 \setlength{\parindent}{0pt}
@@ -16,6 +17,16 @@
 \setlength{\fboxsep}{10pt}
 \setlength{\fboxrule}{1pt}
 
+\iflatexml % for the HTML
+\newenvironment{solution}
+  {\<details>\<summary>Solution.\</summary>}
+  {\</details>}
+\else      % for the PDF
+\newenvironment{solution}{\begin{theorem}[Solution]}{\end{theorem}}
+\fi
+
+
+
 % \includeonly{section_2}
 
 \title{MATH19641: Mathematics 1Q1 \\Lecture Notes}
@@ -24,9 +35,9 @@
 
 \begin{document}
 
-\include{section_0}
-\include{section_1}
-\include{section_2}
+\include{Sections/section_0}
+\include{Sections/section_1}
+\include{Sections/section_2}
 
 
 \end{document}

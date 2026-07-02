@@ -1,0 +1,73 @@
+\documentclass[british,oneside,11pt]{amsart}
+
+%%% RECOMMENDED
+% better accented letters and ligatures in PDF
+\usepackage[T1]{fontenc}
+% set language of outputs (due to issues with TeX Live >= 2025 and LaTeXML <= 0.8.8, put 'british' in the *class* options!)
+\usepackage{babel}
+% PDF hyperlinks and metadata
+\usepackage[pdfusetitle,colorlinks]{hyperref}
+% higher quality variant of Computer Modern
+\usepackage{lmodern}
+% title and author
+\title{BookML template}
+\author{Author}
+
+%%% OPTIONAL
+% additional BookML and LaTeXML functionality
+\usepackage{bookml/bookml}
+% additional versions of the document (e.g. large print) for inclusion in the HTML output
+\bmlAltFormat{\jobname.pdf}{PDF (serif)} % this version is always included unless it's given an empty name
+\bmlAltFormat{\jobname-sans.pdf}{PDF (sans serif)}
+\bmlAltFormat{\jobname-sans-large.pdf}{PDF (sans, large)}
+% simple way of generating a large print PDF (~19% bigger) without changing pagination
+\ifcsname bmlCrop\endcsname\usepackage{crop}\fi
+% short text description used for PDF and SCORM metadata
+\hypersetup{pdfsubject={Empty template for use with BookML.}}
+
+\begin{document}
+
+\maketitle
+
+To use this template:
+\begin{enumerate}
+  \item Replace the content of \texttt{template.tex} with your content. If you rename it to \texttt{NAME.tex}, you must also:
+  \begin{itemize}
+      \item rename \texttt{template-sans.tex} $\to$ \texttt{NAME-sans.tex};
+      \item rename \texttt{template-sans-large.tex} $\to$ \texttt{NAME-sans-large.tex};
+      \item modify \texttt{NAME-sans.tex} and \texttt{NAME-sans-large.tex} to import \texttt{NAME.tex}.
+  \end{itemize}
+  \item Or, add \LaTeX{} files to the same folder containing \texttt{template.tex}. Any files containing the string \verb|\documentclass| (even commented out) will be compiled separately. You may delete \texttt{template.tex} and \texttt{sans} and \texttt{sans-large} variants if you are not using them.
+  \item Run \texttt{make} (\texttt{gmake} on Windows) in the folder containing the files.
+\end{enumerate}
+Consult \texttt{template.tex} and the \href{https://vlmantova.gitthub.io/bookml/}{BookML manual} for more advanced functionality (such as adding large print PDFs, or setting SCORM metadata).
+
+\bigskip
+
+For use with Overleaf (requires paid account):
+\begin{enumerate}
+  \item Have you ever linked Overleaf with your GitHub account? If not, open your Overleaf \href{https://www.overleaf.com/user/settings}{account settings} and \href{https://docs.overleaf.com/integrations-and-add-ons/git-integration-and-github-synchronization/github-synchronization#linking-your-overleaf-account-to-your-github-account}{link your GitHub account} from the `GitHub Sync' entry.
+  \item Upload the template to an existing or new Overleaf project.
+  \item From the Overleaf menu, start \href{https://docs.overleaf.com/integrations-and-add-ons/git-integration-and-github-synchronization/github-synchronization#creating-a-new-github-repository-from-an-overleaf-project}{synchronizing with a new GitHub repository}. The process is smoother when \textbf{the project name has no spaces}.
+  \item Visit the new repository and click the `Watch' icon (next to `Edit Pins', `Fork', `Star').
+  \item Rename the folder \texttt{RENAME\_ME\_TO.github} $\to$ \texttt{.github}.
+  \item Synchronize the project with Gitub again. You may need to grant additional permissions. If you clicked on the `Watch' icon, you should receive an email after a few minutes.
+  \item Every time you sync your Overleaf changes to GitHub, a new build will start and generate a new release.
+  \item For a moderate speed up, change the \TeX{} Live scheme to \texttt{small} or \texttt{medium} in the file \texttt{.github/workflows/bookml.yaml}. For more options, read the \href{https://github.com/marketplace/actions/compile-with-bookml}{BookML action documentation}.
+\end{enumerate}
+
+%%% OPTIONAL
+% footer for HTML output (will not appear in the PDF)
+\begin{lxFooter}
+  Copyright \copyright{} 2026 Author. Compiled with BookML \BookMLversion.
+\end{lxFooter}
+
+% copyright notice for PDF output (will not appear in the HTML)
+\iflatexml\else
+\bigskip
+\begin{center}
+  {\small Copyright \copyright{} 2026 Author. Compiled with BookML \BookMLversion.}
+\end{center}
+\fi
+
+\end{document}
