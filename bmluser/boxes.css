@@ -2,13 +2,13 @@
    border: 4px solid; 
    padding: 0.5em 1em; 
    margin-bottom: 0.5em; 
-   border-color: #20742d; 
+   border-color: #003BB0; 
 }
 
 .lo-box-title{
    margin: -0.5em -1em; 
    padding: 0.25em 0.5em; 
-   background-color: #20742d; 
+   background-color: #003BB0; 
    color:#ffffff;
    font-weight:600;
 }
@@ -17,4 +17,9 @@
    padding: 0.5em 1em; 
    margin-bottom: 0.5em; 
    background-color: #e6e6e6; 
+}
+
+.box-content{
+   padding: 1em 0em; 
+   margin-bottom: -1em; 
 }

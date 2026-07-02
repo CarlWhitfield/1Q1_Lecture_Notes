@@ -8,7 +8,18 @@
 % set language of outputs (due to issues with TeX Live >= 2025 and LaTeXML <= 0.8.8, put 'british' in the *class* options!)
 \usepackage{babel}
 % PDF hyperlinks and metadata
-\usepackage[pdfusetitle,colorlinks]{hyperref}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\definecolor{solframecol}{RGB}{32, 116, 44}
+\definecolor{loframecol}{RGB}{0, 59, 176}
+\definecolor{defcol}{RGB}{230, 230, 230}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=loframecol,
+    filecolor=loframecol,      
+    urlcolor=loframecol
+    }
 % higher quality variant of Computer Modern
 \usepackage{lmodern}
 % title and author
@@ -21,7 +32,6 @@
 \usepackage{enumerate}
 \usepackage{bookml/bookml}
 \usepackage{comment}
-\usepackage{xcolor}
 \usepackage{framed} 
 
 \setlength{\parindent}{0pt}
@@ -31,17 +41,13 @@
 \theoremstyle{definition} 
 \newtheorem{example}{Example}[subsection]
 
-\definecolor{solcol}{RGB}{250, 255, 252}
-\definecolor{solframecol}{RGB}{32, 116, 44}
-
-
 \ifcsname omitSolutions\endcsname
   \excludecomment{solution}
 \else
     \iflatexml % for the HTML
         \newenvironment{solution}{
-            \<details>\<summary>\<b>Solution.\</b>\</summary>}
-            {\</details>}
+            \<details>\<summary>Solution\</summary>\<div class="box-content">}
+            {\</div>\</details>}
     \else      % for the PDF
         \newenvironment{solution}{
         \bgroup\colorlet{TFFrameColor}{solframecol}\colorlet{TFTitleColor}{white}\begin{titled-frame}{Solution}}{\end{titled-frame}\egroup} 
@@ -49,15 +55,15 @@
 \fi
 
 %box for learning outcomes
-\definecolor{loframecol}{RGB}{46, 66, 136}
 \iflatexml % for the HTML
     \newenvironment{learningoutcomes}{
         \<div class="lo-box">
             \<div class="lo-box-title">
                 Learning Outcomes
             \</div>
+            \<div class="box-content">
         }        
-        {\</div>}
+        {\</div>\</div>}
 \else      % for the PDF
     \newenvironment{learningoutcomes}{
     \bgroup\colorlet{TFFrameColor}{loframecol}\colorlet{TFTitleColor}{white}\begin{titled-frame}{Learning Outcomes}}{\end{titled-frame}\egroup} 
@@ -65,11 +71,10 @@
     
 
 %box for definitions
-\definecolor{defcol}{RGB}{230, 230, 230}
 \iflatexml % for the HTML
     \newenvironment{definition}{
-            \<div class="def-box"> \begin{defn}}        
-            {\end{defn} \</div>}
+            \<div class="def-box"> \<div class="box-content">\begin{defn}}        
+            {\end{defn} \</div> \</div>}
 \else      % for the PDF
     \newsavebox{\defbox}
     \newenvironment{definition}
