@@ -19,6 +19,16 @@
    background-color: #e6e6e6; 
 }
 
+/* Sepia theme (color-theme-1) */
+.book.color-theme-1 .def-box {
+    background-color: #C1AF74;
+}
+
+/* Dark theme (color-theme-2) */
+.book.color-theme-2 .def-box {
+    background-color: #000000;
+}
+
 .box-content{
    padding: 1em 0em; 
    margin-bottom: -1em; 

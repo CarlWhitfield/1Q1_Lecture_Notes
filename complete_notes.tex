@@ -45,7 +45,7 @@
 
 \ifcsname insertBlanks\endcsname
     \iflatexml
-        \newcommand{\blank}[1]{\<span style="display: inline-block; border-bottom: 1px solid;">\<span style="visibility: hidden">{#1}{#1}\</span>\</span>}
+        \newcommand{\blank}[1]{\<span style="display: inline-block; border-bottom: 1px solid black;">\<span style="visibility: hidden">{#1}{#1}\</span>\</span>}
     \else
       \newlength{\myl}
       \newcommand{\blank}[1]{\settowidth{\myl}{#1}
