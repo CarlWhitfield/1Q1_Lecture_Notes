@@ -44,9 +44,13 @@
 \newtheorem{ex}{Example}[subsection]
 
 \ifcsname insertBlanks\endcsname
-  \newlength{\myl}
-  \newcommand{\blank}[1]{\settowidth{\myl}{#1}
-  \underline{\hspace{2\myl}}}
+    \iflatexml
+        \newcommand{\blank}[1]{\<span style="display: inline-block; border-bottom: 1px solid;">\<span style="visibility: hidden">{#1}{#1}\</span>\</span>}
+    \else
+      \newlength{\myl}
+      \newcommand{\blank}[1]{\settowidth{\myl}{#1}
+      \underline{\hspace{2\myl}}}
+    \fi
 \else
   \newcommand{\blank}[1]{#1}
 \fi
