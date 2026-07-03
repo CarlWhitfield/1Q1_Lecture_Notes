@@ -1,4 +1,4 @@
-\documentclass[11pt]{article}
+\documentclass[12pt]{article}
 
 
 
@@ -10,7 +10,9 @@
 % PDF hyperlinks and metadata
 \usepackage{hyperref}
 \usepackage{xcolor}
+\usepackage{setspace}
 \definecolor{solframecol}{RGB}{32, 116, 44}
+\definecolor{excol}{RGB}{235, 255, 235}
 \definecolor{loframecol}{RGB}{0, 59, 176}
 \definecolor{defcol}{RGB}{230, 230, 230}
 
@@ -39,19 +41,23 @@
 
 \newtheorem{defn}{Definition}[subsection]
 \theoremstyle{definition} 
-\newtheorem{example}{Example}[subsection]
+\newtheorem{ex}{Example}[subsection]
 
-\ifcsname omitSolutions\endcsname
-  \excludecomment{solution}
+\ifcsname insertBlanks\endcsname
+  \newlength{\myl}
+  \newcommand{\blank}[1]{\settowidth{\myl}{#1}
+  \underline{\hspace{2\myl}}}
 \else
-    \iflatexml % for the HTML
-        \newenvironment{solution}{
-            \<details>\<summary>Solution\</summary>\<div class="box-content">}
-            {\</div>\</details>}
-    \else      % for the PDF
-        \newenvironment{solution}{
-        \bgroup\colorlet{TFFrameColor}{solframecol}\colorlet{TFTitleColor}{white}\begin{titled-frame}{Solution}}{\end{titled-frame}\egroup} 
-    \fi
+  \newcommand{\blank}[1]{#1}
+\fi
+
+\iflatexml % for the HTML
+    \newenvironment{solution}{
+        \<details>\<summary>Solution\</summary>\<div class="box-content">}
+        {\</div>\</details>}
+\else      % for the PDF
+    \newenvironment{solution}{
+    \bgroup\colorlet{TFFrameColor}{solframecol}\colorlet{TFTitleColor}{white}\begin{titled-frame}{Solution}}{\end{titled-frame}\egroup} 
 \fi
 
 %box for learning outcomes
@@ -63,7 +69,27 @@
     \newenvironment{learningoutcomes}{
     \bgroup\colorlet{TFFrameColor}{loframecol}\colorlet{TFTitleColor}{white}\begin{titled-frame}{Learning Outcomes}}{\end{titled-frame}\egroup} 
 \fi
-    
+
+
+%box for examples
+\iflatexml % for the HTML
+    \newenvironment{example}{
+            \<div class="ex-box"> \begin{ex}}        
+            {\end{ex} \</div>}
+\else      % for the PDF
+    \newsavebox{\exbox}
+    \newenvironment{example}
+      {\begin{lrbox}{\exbox}%
+       \begin{minipage}{\dimexpr\columnwidth-2\fboxsep\relax}
+       \setlength{\parindent}{0pt}
+       \begin{ex}}
+      {\end{ex}\end{minipage}\end{lrbox}%
+       \begin{center}
+       \setlength{\fboxsep}{8pt}
+       \colorbox{excol}{\usebox{\exbox}}
+       \end{center}}
+\fi
+
 
 %box for definitions
 \iflatexml % for the HTML
@@ -84,20 +110,11 @@
        \end{center}}
 \fi
 
-
-% {\begin{lrbox}{\mybox}\begin{minipage}{0.9\textwidth}\begin{ex}}
-% {\end{ex}\end{minipage}\end{lrbox}\fbox{\usebox{\mybox}}}
-
-
-
-
-
-
-% \includeonly{section_2}
-
 \title{MATH19641: Mathematics 1Q1 \\Lecture Notes}
 \author{Carl A. Whitfield}
 \date{Semester 1 -- Academic Year 2026/27}
+
+\onehalfspacing
 
 \begin{document}
 
