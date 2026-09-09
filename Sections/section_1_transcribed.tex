@@ -26,7 +26,7 @@ The animation in figure \ref{anim:straightline} (online version only) allows you
 \begin{figure}
     \centering
     \iflatexml
-        \bmlRawHTML{<iframe src="./Figures/Section1/straight_line_widget.html" style="width:100\%;height:500px;border:none;"> </iframe>}
+        \<iframe src="bmluser/straight_line_widget.html" style="width:100\%;height:500px;border:none;"> \</iframe>
         \caption{Interactive plot of a straight line.}
     \else
         \includegraphics[width=0.5\textwidth]{Figures/Section1/straight_line_widget.png}
@@ -390,10 +390,9 @@ for $0\leq t<2\pi$. The interactive animation in figure \ref{anim:parametric} de
 \begin{figure}
     \centering
     \iflatexml
-        \bmlRawHTML{
-            <div id="parametric-curve-widget" data-r="1"></div> 
-            <script src="https://cdn.plot.ly/plotly-3.0.1.min.js"></script>
-            <script src="./Figures/Section1/parametric_curve_widget.js"></script>}
+            \<div id="parametric-curve-widget" data-r="1">\</div> 
+            \<script src="https://cdn.plot.ly/plotly-3.0.1.min.js">\</script>
+            \<script src="bmluser/parametric_curve_widget.js">\</script>
         \caption{Interactive plot of the parametric curve $x=\cos t$, $y=\sin t$. The colour goes from white to red as $t$ increases.}
     \else
     \begin{subfigure}{0.33\textwidth}
