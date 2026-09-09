@@ -11,7 +11,7 @@
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{setspace}
-\usepackage{environ}
+% \usepackage{environ}
 \usepackage{subcaption}
 \definecolor{solframecol}{RGB}{32, 116, 44}
 \definecolor{solblankcol}{RGB}{255, 255, 153}
@@ -54,6 +54,7 @@
     
     
 \else      % for the PDF
+    \usepackage{environ}
     \newenvironment{solution}{
     \bgroup\colorlet{TFFrameColor}{solframecol}\colorlet{TFTitleColor}{white}\begin{titled-frame}{Solution}}{\end{titled-frame}\egroup}
     
