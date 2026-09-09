@@ -112,10 +112,15 @@
 \iflatexml % for the HTML
     \newenvironment{learningoutcomes}{
         \<div class="lo-box">
-            \<div class="lo-box-title"> Learning Outcomes\</div>\<div class="box-content">}{\</div>\</div>}
+            \<div class="lo-box-title"> Learning Outcomes\</div>\<div class="box-content">On completion of this subsection, students will be able to \begin{itemize}}{\end{itemize}\</div>\</div>}
+    \newenvironment{ILOs}{
+        \<div class="lo-box">
+            \<div class="lo-box-title"> Intended Learning Outcomes\</div>\<div class="box-content">On completion of this course unit, students will be able to \begin{itemize}}{\end{itemize}\</div>\</div>}
 \else      % for the PDF
     \newenvironment{learningoutcomes}{
-    \bgroup\colorlet{TFFrameColor}{loframecol}\colorlet{TFTitleColor}{white}\begin{titled-frame}{Learning Outcomes} On completion of this subsections, students will be able to \begin{itemize}}{\end{itemize}\end{titled-frame}\egroup} 
+    \bgroup\colorlet{TFFrameColor}{loframecol}\colorlet{TFTitleColor}{white}\begin{titled-frame}{Learning Outcomes} On completion of this subsection, students will be able to \begin{itemize}}{\end{itemize}\end{titled-frame}\egroup} 
+    \newenvironment{ILOs}{
+    \bgroup\colorlet{TFFrameColor}{loframecol}\colorlet{TFTitleColor}{white}\begin{titled-frame}{Intended Learning Outcomes} On completion of this course unit, students will be able to \begin{itemize}}{\end{itemize}\end{titled-frame}\egroup} 
 \fi
 
 
