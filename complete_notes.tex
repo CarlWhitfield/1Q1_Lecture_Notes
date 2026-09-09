@@ -90,7 +90,7 @@
 
 \ifcsname insertBlanks\endcsname
     \iflatexml
-        \newcommand{\blank}[1]{\<span style="display: inline-block; border-bottom: 1px solid black;">\<span style="visibility: hidden">{\verb|#1|}\</span>\</span>}
+        \newcommand{\blank}[1]{\text{\<span style="display: inline-block; border-bottom: 1px solid black;">\<span style="visibility: hidden">{\verb|#1|}\</span>\</span>}}
         \newcommand{\blankpar}[1]{\<span style="display: inline-block; border-bottom: 1px solid black;">\<span style="visibility: hidden">{\verb|#1|}\</span>\</span>}
     \else
       % \newlength{\myl}
