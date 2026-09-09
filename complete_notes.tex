@@ -52,9 +52,14 @@
         \<details>\<summary>Solution\</summary>\<div class="box-content">}
         {\</div>\</details>}
 
-    \newenvironment{blanksol}{
-        \<details>\<summary>Solution (left blank for your working)\</summary>\<div class="box-content">\<span style="visibility: hidden">}
-        {\</span>\</div>\</details>}
+    \ifdefined \insertBlanks
+        \newenvironment{blanksol}{
+            \<details>\<summary>Solution (left blank for your working)\</summary>\<div class="box-content">\<span style="visibility: hidden">}{\</span>\</div>\</details>}
+    \else
+        \newenvironment{blanksol}{
+        \<details>\<summary>Solution\</summary>\<div class="box-content">}
+        {\</div>\</details>}
+    \fi
     
 \else      % for the PDF
     \usepackage{environ}
@@ -88,7 +93,7 @@
     }
 \fi
 
-\ifcsname insertBlanks\endcsname
+\ifdefined \insertBlanks
     \iflatexml
         \newcommand{\blank}[1]{\underline{\phantom{#1}}}
         \newcommand{\blankpar}[1]{\<span style="display: inline-block; border-bottom: 1px solid black;">\<span style="visibility: hidden">{#1}\</span>\</span>}
