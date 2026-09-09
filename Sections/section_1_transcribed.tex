@@ -24,11 +24,25 @@ for variables $x$ and $y$, and constants $a$, $b$ and $p$, represents a straight
 The animation in figure \ref{anim:straightline} (online version only) allows you to control the gradient and intercept of a straight line with sliders. 
 
 \begin{figure}
-    \centering
     \iflatexml
-        \bmlRawHTML{<script src="https://cdn.jsdelivr.net/npm/chart.js"></script><div class="chart-container"><canvas id="lineChart" width="500" height="500"></canvas></div><div class="slider-container"><label class="slider-label" for="slopeSlider">Slope (m):</label><input type="range" id="slopeSlider" min="-2" max="2" step="0.1" value="1"><span id="slopeValue" class="slider-value">1</span></div><div class="slider-container"><label class="slider-label" for="interceptSlider">Intercept (c):</label><input type="range" id="interceptSlider" min="-5" max="5" step="0.2" value="0"><span id="interceptValue" class="slider-value">0</span></div><script src="bmluser/straight_line_widget.js"></script>}
+        \<script src="https://cdn.jsdelivr.net/npm/chart.js">\</script>
+        \<div class="chart-container">
+        \<canvas id="lineChart" width="500" height="500">\</canvas>
+        \</div>
+        \<div class="slider-container">
+        \<label class="slider-label" for="slopeSlider">Slope (m):\</label>
+        \<input type="range" id="slopeSlider" min="-2" max="2" step="0.1" value="1"/>
+        \<span id="slopeValue" class="slider-value">1\</span>
+        \</div>
+        \<div class="slider-container">
+        \<label class="slider-label" for="interceptSlider">Intercept (c):\</label>
+        \<input type="range" id="interceptSlider" min="-5" max="5" step="0.2" value="0"/>
+        \<span id="interceptValue" class="slider-value">0\</span>
+        \</div>
+        \<script src="bmluser/straight\_line\_widget.js">\</script>
         \caption{Interactive plot of a straight line.}
     \else
+        \centering
         \includegraphics[width=0.5\textwidth]{Figures/Section1/straight_line_widget.png}
         \caption{Screenshot of the interactive plot of a straight line, available in the html version of these notes.}
     \fi
@@ -359,13 +373,13 @@ x=a+R\cos t, \qquad y=b+R\sin t,
 for $0\leq t<2\pi$. The interactive animation in figure \ref{anim:parametric} demonstrates how parametric relations can be visualised by making the parameter $t$ the coordinate of the third dimension. 
 
 \begin{figure}
-    \centering
     \iflatexml
             \<div id="parametric-curve-widget" data-r="1">\</div> 
             \<script src="https://cdn.plot.ly/plotly-3.0.1.min.js">\</script>
             \<script src="bmluser/parametric\_curve\_widget.js">\</script>
         \caption{Interactive plot of the parametric curve $x=\cos t$, $y=\sin t$. The colour goes from white to red as $t$ increases.}
     \else
+    \centering
     \subfig{0.33}{Figures/Section1/parametric_curve_widget_xt.png}{$x-t$ plane}
     \hfill
     \subfig{0.33}{Figures/Section1/parametric_curve_widget_yt.png}{$y-t$ plane}
