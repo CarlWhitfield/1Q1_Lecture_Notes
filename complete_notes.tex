@@ -11,10 +11,14 @@
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{setspace}
+\usepackage{environ}
+\usepackage{subcaption}
 \definecolor{solframecol}{RGB}{32, 116, 44}
+\definecolor{solblankcol}{RGB}{255, 255, 153}
 \definecolor{excol}{RGB}{235, 255, 235}
 \definecolor{loframecol}{RGB}{0, 59, 176}
 \definecolor{defcol}{RGB}{230, 230, 230}
+\definecolor{examcol}{RGB}{255,203,112}
 
 \hypersetup{
     colorlinks=true,
@@ -39,29 +43,59 @@
 \setlength{\parindent}{0pt}
 \numberwithin{equation}{subsection}
 
-\newtheorem{defn}{Definition}[subsection]
+% \newtheorem{defn}{Useful definition}[subsection]
 \theoremstyle{definition} 
 \newtheorem{ex}{Example}[subsection]
-
-\ifcsname insertBlanks\endcsname
-    \iflatexml
-        \newcommand{\blank}[1]{\<span style="display: inline-block; border-bottom: 1px solid black;">\<span style="visibility: hidden">{#1}{#1}\</span>\</span>}
-    \else
-      \newlength{\myl}
-      \newcommand{\blank}[1]{\settowidth{\myl}{#1}
-      \underline{\hspace{2\myl}}}
-    \fi
-\else
-  \newcommand{\blank}[1]{#1}
-\fi
 
 \iflatexml % for the HTML
     \newenvironment{solution}{
         \<details>\<summary>Solution\</summary>\<div class="box-content">}
         {\</div>\</details>}
+    
+    
 \else      % for the PDF
     \newenvironment{solution}{
-    \bgroup\colorlet{TFFrameColor}{solframecol}\colorlet{TFTitleColor}{white}\begin{titled-frame}{Solution}}{\end{titled-frame}\egroup} 
+    \bgroup\colorlet{TFFrameColor}{solframecol}\colorlet{TFTitleColor}{white}\begin{titled-frame}{Solution}}{\end{titled-frame}\egroup}
+    
+    \newsavebox{\solutionbox} 
+    \newlength{\solutionheight} 
+    
+    \NewEnviron{blanksol}{ 
+        \sbox{\solutionbox}{ 
+        \begin{minipage}{\linewidth}
+            \bgroup \colorlet{TFFrameColor}{solframecol} \colorlet{TFTitleColor}{white}
+            \begin{titled-frame}{Solution} 
+                \BODY
+            \end{titled-frame} 
+            \egroup 
+        \end{minipage}
+        }
+        \setlength{\solutionheight} {\dimexpr\ht\solutionbox+\dp\solutionbox\relax}
+        \ifdefined \insertBlanks
+            \bgroup \colorlet{TFFrameColor}{solframecol} \colorlet{TFTitleColor}{white}
+            \begin{titled-frame}{Solution (left blank for your working)} 
+                \vspace*{1.5\solutionheight}
+            \end{titled-frame} 
+            \egroup 
+        \else
+            \usebox{\solutionbox}
+        \fi
+    }
+\fi
+
+\ifcsname insertBlanks\endcsname
+    \iflatexml
+        \newcommand{\blank}[1]{\<span style="display: inline-block; border-bottom: 1px solid black;">\<span style="visibility: hidden">{#1}{#1}\</span>\</span>}
+        \newcommand{\blankpar}[1]{\<span style="display: inline-block; border-bottom: 1px solid black;">\<span style="visibility: hidden">{#1}{#1}\</span>\</span>}
+    \else
+      % \newlength{\myl}
+      % \newcommand{\blank}[1]{\settowidth{\myl}{#1} \underline{\hspace{2\myl}}}
+      \newcommand{\blank}[1]{\colorbox{solblankcol}{\phantom{$\displaystyle \qquad #1 \qquad$}}}
+      \newcommand{\blankpar}[1]{\colorbox{solblankcol}{\phantom{ #1 }}}
+    \fi
+\else
+  \newcommand{\blank}[1]{#1}
+  \newcommand{\blankpar}[1]{#1}
 \fi
 
 %box for learning outcomes
@@ -71,7 +105,7 @@
             \<div class="lo-box-title"> Learning Outcomes\</div>\<div class="box-content">}{\</div>\</div>}
 \else      % for the PDF
     \newenvironment{learningoutcomes}{
-    \bgroup\colorlet{TFFrameColor}{loframecol}\colorlet{TFTitleColor}{white}\begin{titled-frame}{Learning Outcomes}}{\end{titled-frame}\egroup} 
+    \bgroup\colorlet{TFFrameColor}{loframecol}\colorlet{TFTitleColor}{white}\begin{titled-frame}{Learning Outcomes} On completion of this subsections, students will be able to \begin{itemize}}{\end{itemize}\end{titled-frame}\egroup} 
 \fi
 
 
@@ -98,20 +132,63 @@
 %box for definitions
 \iflatexml % for the HTML
     \newenvironment{definition}{
-            \<div class="def-box"> \begin{defn}}        
-            {\end{defn} \</div>}
+            \<div class="def-box"> \textbf{Useful definition:}        
+            {\</div>}
 \else      % for the PDF
     \newsavebox{\defbox}
     \newenvironment{definition}
       {\begin{lrbox}{\defbox}%
        \begin{minipage}{\dimexpr\columnwidth-2\fboxsep\relax}
        \setlength{\parindent}{0pt}
-       \begin{defn}}
-      {\end{defn}\end{minipage}\end{lrbox}%
+       {\bf Useful definition:}}
+      {\end{minipage}\end{lrbox}%
        \begin{center}
        \setlength{\fboxsep}{8pt}
        \colorbox{defcol}{\usebox{\defbox}}
        \end{center}}
+\fi
+
+\iflatexml % for the HTML
+    \newenvironment{definitions}{
+            \<div class="def-box"> \textbf{Useful definitions:}        
+            {\</div>}
+\else      % for the PDF
+    \newenvironment{definitions}
+      {\begin{lrbox}{\defbox}%
+       \begin{minipage}{\dimexpr\columnwidth-2\fboxsep\relax}
+       \setlength{\parindent}{0pt}
+       {\bf Useful definitions:}}
+      {\end{minipage}\end{lrbox}%
+       \begin{center}
+       \setlength{\fboxsep}{8pt}
+       \colorbox{defcol}{\usebox{\defbox}}
+       \end{center}}
+\fi
+
+\iflatexml % for the HTML
+    \newenvironment{exammistake}{
+            \<div class="def-box"> \textbf{Useful definition:}        
+            {\</div>}
+\else      % for the PDF
+    \newsavebox{\exambox}
+    \newenvironment{exammistake}
+      {\begin{lrbox}{\exambox}%
+       \begin{minipage}{\dimexpr\columnwidth-2\fboxsep\relax}
+       \setlength{\parindent}{0pt}
+       \begin{center}
+       {\bf $\star$ Exam mistake of the week $\star$}
+       \end{center}\par}
+      {\end{minipage}\end{lrbox}%
+       \begin{center}
+       \setlength{\fboxsep}{8pt}
+       \colorbox{examcol}{\usebox{\exambox}}
+       \end{center}}
+\fi
+
+\iflatexml
+    \newcommand{\newtexpage}{}
+\else
+    \newcommand{\newtexpage}{\newpage}
 \fi
 
 \title{MATH19641: Mathematics 1Q1 \\Lecture Notes}
@@ -122,8 +199,8 @@
 
 \begin{document}
 
-\include{Sections/section_0}
-\include{Sections/section_1}
+\input{Sections/section_0}
+\input{Sections/section_1_transcribed}
 % \include{Sections/section_2}
 
 
