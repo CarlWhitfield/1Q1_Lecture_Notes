@@ -19,14 +19,28 @@
    background-color: #e6e6e6; 
 }
 
+.mistake-box{
+   padding: 0.5em 1em; 
+   margin-bottom: 0.5em; 
+   background-color: #FFCB70; 
+}
+
 /* Sepia theme (color-theme-1) */
 .book.color-theme-1 .def-box {
     background-color: #C1AF74;
 }
 
+.book.color-theme-1 .mistake-box {
+    background-color: #FFCB96;
+}
+
 /* Dark theme (color-theme-2) */
 .book.color-theme-2 .def-box {
     background-color: #000000;
+}
+
+.book.color-theme-2 .mistake-box {
+    background-color: #B55300;
 }
 
 .box-content{

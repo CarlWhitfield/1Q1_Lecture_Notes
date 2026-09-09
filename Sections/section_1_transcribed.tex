@@ -14,17 +14,27 @@ An equation of the form
 \[
 ax+by=p
 \]
-for variables $x$ and $y$, and constants $a$, $b$ and $p$, represents a straight line in $x$--$y$ space. The equation can be rearranged into other forms. The form $y=mx+c$ is particularly useful. Here, $m$ represents the \textbf{gradient} of the line and $c$ represents the $y$-\textbf{intercept}, \textit{i.e.} the point $(0,c)$ where the line meets the $y$-axis (figure \ref{fig:line}).
+for variables $x$ and $y$, and constants $a$, $b$ and $p$, represents a straight line in $x$--$y$ space. The equation can be rearranged into other forms. The form $y=mx+c$ is particularly useful. Here, $m$ represents the \textbf{gradient} of the line and $c$ represents the $y$-\textbf{intercept}, \textit{i.e.} the point $(0,c)$ where the line meets the $y$-axis (figure \ref{fig:line}). 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.5\textwidth, alt={Sketch of $y=mx+c$, showing that the y-coordinate of the line increases by $m$ for every distance 1 moved in the x-direction.}]{Figures/Section1/111a_line.png}
     \caption{Sketch of $y=mx+c$, showing that the y-coordinate of the line increases by $m$ for every distance 1 moved in the x-direction.}
     \label{fig:line}
 \end{figure}
+The animation in figure \ref{anim:straightline} (online version only) allows you to control the gradient and intercept of a straight line with sliders. 
 
-\iflatexml
-     \bmlRawHTML{<iframe src="./Figures/Section1/straight_line_widget.html" style="width:100%;height:500px;border:none;"> </iframe>}
-\fi
+\begin{figure}
+    \centering
+    \iflatexml
+        \bmlRawHTML{<iframe src="./Figures/Section1/straight_line_widget.html" style="width:100\%;height:500px;border:none;"> </iframe>}
+        \caption{Interactive plot of a straight line.}
+    \else
+        \includegraphics[width=0.5\textwidth]{Figures/Section1/straight_line_widget.png}
+        \caption{Screenshot of the interactive plot of a straight line, available in the html version of these notes.}
+    \fi
+    \label{anim:straightline}
+\end{figure}
+
 
 
 Some useful properties of straight lines, as demonstrated in figure \ref{fig:lines_props}, are as follows
@@ -375,11 +385,33 @@ So $x$ and $y$ are both functions of the parameter $t$. For example, the equatio
 \[
 x=a+R\cos t, \qquad y=b+R\sin t,
 \]
-for $0\leq t<2\pi$. The interactive animation below demonstrates how parametric relations can be visualised by making the parameter $t$ the coordinate of the third dimension. 
+for $0\leq t<2\pi$. The interactive animation in figure \ref{anim:parametric} demonstrates how parametric relations can be visualised by making the parameter $t$ the coordinate of the third dimension. 
 
-% \iflatexml
-%     \bmlRawHTML{<script src="./Figures/Section1/parametric_graph/graph-visualiser-app/src/app.j"></script>}
-% \fi
+\begin{figure}
+    \centering
+    \iflatexml
+        \bmlRawHTML{
+            <div id="parametric-curve-widget" data-r="1"></div> 
+            <script src="https://cdn.plot.ly/plotly-3.0.1.min.js"></script>
+            <script src="./Figures/Section1/parametric_curve_widget.js"></script>}
+        \caption{Interactive plot of the parametric curve $x=\cos t$, $y=\sin t$. The colour goes from white to red as $t$ increases.}
+    \else
+    \begin{subfigure}{0.33\textwidth}
+        \includegraphics[width=\textwidth]{Figures/Section1/parametric_curve_widget_xt.png}
+        \caption{$x-t$ plane}
+    \end{subfigure}
+    \begin{subfigure}{0.33\textwidth}
+        \includegraphics[width=\textwidth]{Figures/Section1/parametric_curve_widget_yt.png}
+        \caption{$y-t$ plane}
+    \end{subfigure}
+    \begin{subfigure}{0.25\textwidth}
+        \includegraphics[width=\textwidth]{Figures/Section1/parametric_curve_widget_xy.png}
+        \caption{$x-y$ plane}
+    \end{subfigure}
+    \caption{Screenshots of the interactive plot of the parametric curve $x=\cos t$, $y=\sin t$, available in the html version of these notes. The colour goes from white to red as $t$ increases.}
+    \fi
+    \label{anim:parametric}
+\end{figure}
 
 
 \begin{example}[DIY]
