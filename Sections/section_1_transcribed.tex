@@ -26,7 +26,7 @@ The animation in figure \ref{anim:straightline} (online version only) allows you
 \begin{figure}
     \centering
     \iflatexml
-        \<iframe src="Figures/Section1/straight\_line\_widget.html" style="width:100\%;height:500px;border:none;"> \</iframe>
+        \<iframe src="bmluser/straight\_line\_widget.html" style="width:100\%;height:500px;border:none;"> \</iframe>
         \caption{Interactive plot of a straight line.}
     \else
         \includegraphics[width=0.5\textwidth]{Figures/Section1/straight_line_widget.png}
@@ -48,30 +48,15 @@ Some useful properties of straight lines, as demonstrated in figure \ref{fig:lin
 
 \begin{figure}[h!]
 \centering
-\begin{subfigure}{0.45\textwidth}
-    \includegraphics[width=\textwidth]{Figures/Section1/111bi_parallel.png}
-    \caption{Parallel lines}
-\end{subfigure}
+\subfig{0.45}{Figures/Section1/111bi_parallel.png}{Parallel lines}
 \hfill
-\begin{subfigure}{0.45\textwidth}
-    \includegraphics[width=\textwidth]{Figures/Section1/111bii_perp.png}
-    \caption{Perpendicular lines}
-\end{subfigure}
+\subfig{0.45}{Figures/Section1/111bii_perp.png}{Perpendicular lines}
 \hfill
-\begin{subfigure}{0.45\textwidth}
-    \includegraphics[width=\textwidth]{Figures/Section1/111biii_horizontal.png}
-    \caption{Horizontal line}
-\end{subfigure}
+\subfig{0.45}{Figures/Section1/111biii_horizontal.png}{Horizontal line}
 \hfill
-\begin{subfigure}{0.45\textwidth}
-    \includegraphics[width=\textwidth]{Figures/Section1/111biv_vertical.png}
-    \caption{Vertical line}
-\end{subfigure}
+\subfig{0.45}{Figures/Section1/111biv_vertical.png}{Vertical line}
 \hfill
-\begin{subfigure}{0.45\textwidth}
-    \includegraphics[width=\textwidth]{Figures/Section1/111bv_crossing.png}
-    \caption{Two lines that cross}
-\end{subfigure}
+\subfig{0.45}{Figures/Section1/111bv_crossing.png}{Two lines that cross}
 \caption{Examples of straight line properties and relations.}
 \label{fig:lines_props}
 \end{figure}
@@ -153,20 +138,11 @@ To find where a line and a circle cross, substitute the equation of the line, $y
 These possibilities are shown in figure \ref{fig:circle_cross}.
 \begin{figure}[h!]
 \centering
-\begin{subfigure}{0.3\textwidth}
-    \includegraphics[width=\textwidth]{Figures/Section1/112_twocross.png}
-    \caption{Two crossing points}
-\end{subfigure}
+\subfig{0.3}{Figures/Section1/112_twocross.png}{Two crossing points}
 \hfill
-\begin{subfigure}{0.3\textwidth}
-    \includegraphics[width=\textwidth]{Figures/Section1/112_onecross.png}
-    \caption{One crossing point}
-\end{subfigure}
+\subfig{0.3}{Figures/Section1/112_onecross.png}{One crossing point}
 \hfill
-\begin{subfigure}{0.3\textwidth}
-    \includegraphics[width=\textwidth]{Figures/Section1/112_nocross.png}
-    \caption{No crossing points}
-\end{subfigure}
+\subfig{0.3}{Figures/Section1/112_nocross.png}{No crossing points}
 \caption{Three possibilities for the crossing points of a line and a circle.}
 \label{fig:circle_cross}
 \end{figure}
@@ -208,14 +184,9 @@ At any point on a circle, the radius and tangent are perpendicular, as shown in 
 
 \begin{figure}[h!]
     \centering
-    \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=\textwidth]{Figures/Section1/112bi_radtan.png}
-        \caption{Tangent line}
-    \end{subfigure}
-        \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=\textwidth]{Figures/Section1/112biI_perpbisector.png}
-        \caption{Perpendicular bisector}
-    \end{subfigure}
+    \subfig{0.45}{Figures/Section1/112bi_radtan.png}{Tangent line}
+    \hfill
+    \subfig{0.45}{Figures/Section1/112biI_perpbisector.png}{Perpendicular bisector}
     \caption{Sketches of (a) the tangent to a circle, which is perpendicular to its radius and (b) the perpendicular bisector ($CD$) of two points on the circle ($A$ and $B$), which passes through the circle's centre $E$.}
     \label{fig:perp_rad}
 \end{figure}
@@ -392,21 +363,14 @@ for $0\leq t<2\pi$. The interactive animation in figure \ref{anim:parametric} de
     \iflatexml
             \<div id="parametric-curve-widget" data-r="1">\</div> 
             \<script src="https://cdn.plot.ly/plotly-3.0.1.min.js">\</script>
-            \<script src="Figures/Section1/parametric\_curve\_widget.js">\</script>
+            \<script src="bmluser/parametric\_curve\_widget.js">\</script>
         \caption{Interactive plot of the parametric curve $x=\cos t$, $y=\sin t$. The colour goes from white to red as $t$ increases.}
     \else
-    \begin{subfigure}{0.33\textwidth}
-        \includegraphics[width=\textwidth]{Figures/Section1/parametric_curve_widget_xt.png}
-        \caption{$x-t$ plane}
-    \end{subfigure}
-    \begin{subfigure}{0.33\textwidth}
-        \includegraphics[width=\textwidth]{Figures/Section1/parametric_curve_widget_yt.png}
-        \caption{$y-t$ plane}
-    \end{subfigure}
-    \begin{subfigure}{0.25\textwidth}
-        \includegraphics[width=\textwidth]{Figures/Section1/parametric_curve_widget_xy.png}
-        \caption{$x-y$ plane}
-    \end{subfigure}
+    \subfig{0.33}{Figures/Section1/parametric_curve_widget_xt.png}{$x-t$ plane}
+    \hfill
+    \subfig{0.33}{Figures/Section1/parametric_curve_widget_yt.png}{$y-t$ plane}
+    \hfill
+    \subfig{0.25}{Figures/Section1/parametric_curve_widget_xy.png}{$x-y$ plane}
     \caption{Screenshots of the interactive plot of the parametric curve $x=\cos t$, $y=\sin t$, available in the html version of these notes. The colour goes from white to red as $t$ increases.}
     \fi
     \label{anim:parametric}

@@ -53,8 +53,8 @@
         {\</div>\</details>}
 
     \newenvironment{blanksol}{
-        \<details>\<summary>Solution (left blank for your working)\</summary>\<div class="box-content">}
-        {\</div>\</details>}
+        \<details>\<summary>Solution (left blank for your working)\</summary>\<div class="box-content">\<span style="visibility: hidden">}
+        {\</span>\</div>\</details>}
     
 \else      % for the PDF
     \usepackage{environ}
@@ -190,6 +190,16 @@
        \setlength{\fboxsep}{8pt}
        \colorbox{examcol}{\usebox{\exambox}}
        \end{center}}
+\fi
+
+\iflatexml
+    \newcommand{\subfig}[3]{\begin{subfigure}{\textwidth}
+    \includegraphics[width=#1\textwidth]{#2}
+    \caption{#3} \end{subfigure}}
+\else
+    \newcommand{\subfig}[3]{\begin{subfigure}{#1\textwidth}
+    \includegraphics[width=\textwidth]{#2}
+    \caption{#3} \end{subfigure}}
 \fi
 
 \iflatexml
