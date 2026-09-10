@@ -52,7 +52,7 @@
         \<details>\<summary>Solution\</summary>\<div class="box-content">}
         {\</div>\</details>}
 
-    \ifdefined \insertBlanks
+    \ifcsname insertBlanks \endcsname
         \newenvironment{blanksol}{
             \<details>\<summary>Solution (left blank for your working)\</summary>\<div class="box-content", style="visibility: hidden">}{\</div>\</details>}
     \else
@@ -80,7 +80,7 @@
         \end{minipage}
         }
         \setlength{\solutionheight} {\dimexpr\ht\solutionbox+\dp\solutionbox\relax}
-        \ifdefined \insertBlanks
+        \ifcsname insertBlanks\endcsname
             \bgroup \colorlet{TFFrameColor}{solframecol} \colorlet{TFTitleColor}{white}
             \begin{titled-frame}{Solution (left blank for your working)} 
                 \vspace*{1.5\solutionheight}
@@ -93,7 +93,7 @@
     }
 \fi
 
-\ifdefined \insertBlanks
+\ifcsname insertBlanks \endcsname
     \iflatexml
         \newcommand{\blank}[1]{\underline{\phantom{#1}}}
         \newcommand{\blankpar}[1]{\<span style="display: inline-block; border-bottom: 1px solid black;">\<span style="visibility: hidden">{#1}\</span>\</span>}
