@@ -1,8 +1,3 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 20px;
-}
 .chart-container {
     display: flex;
     justify-content: center; /* Horizontally center the chart */
