@@ -19,7 +19,7 @@ Another way to imagine this is demonstrated in figure \ref{fig:diff_zoom}. As we
 \begin{figure}[h!]
     \centering
     \iflatexml
-        \bmlRawHTML{<img src="https://www.image2url.com/r2/default/gifs/1789052907697-71655270-58bd-4d1f-b112-8cd1b9e1ef77.gif" alt="Animation showing how the straight line between two points on the curve $\sin x$ gets closer to a tangent to the curve as we zoom in and reduce $h$." style="width:48px;height:48px;">}
+        % \<img src="https://www.image2url.com/r2/default/gifs/1789052907697-71655270-58bd-4d1f-b112-8cd1b9e1ef77.gif" alt="Animation showing how the straight line between two points on the curve $\sin x$ gets closer to a tangent to the curve as we zoom in and reduce $h$." style="width:48px;height:48px;">
     \else
         \subfig{0.3}{Figures/Section2/plot_h_0.png}{Zoomed out, $h=1$.}
         \subfig{0.3}{Figures/Section2/plot_h_80.png}{Zooming in, $h=0.1$.}
@@ -59,8 +59,10 @@ Some common derivatives of functions are given in table \begin{table}[ht]
 
 \textbf{The first derivative test.} To use this test to classify a stationary point at $x=x_0$, 
 \begin{enumerate}
-    \item evaluate $f'(x)$ at two points either side of $x_0$, \emph{i.e.} $f'(x_0-h)$ and $f'(x_0+h)$ for small $h$.
-\end{enumerate}first  Drawing the line \textbackslash for a negative value, / for a positive value and -- for the stationary point itself forms a sketch of how the function looks around the stationary point. See table \ref{tab:first_deriv_test} for the possible classifications.
+    \item evaluate $f'(x)$ at two points either side of $x_0$, \emph{i.e.} $f'(x_0-h)$ and $f'(x_0+h)$ for small $h$. Make sure $h$ is small enough so that $x \pm h$ does not cross any other stationary points.
+    \item Draw the line \textbackslash for a negative value, / for a positive value and -- for the stationary point itself forms a sketch of how the function looks around the stationary point (e.g. a minimum will be \textbackslash -- /, and a maximum  / --\textbackslash
+\end{enumerate}
+
 
 \begin{example}[Lecture]
 Find any stationary points for the function
