@@ -19,7 +19,7 @@ Another way to imagine this is demonstrated in figure \ref{fig:diff_zoom}. As we
 \begin{figure}[h!]
     \centering
     \iflatexml
-        \bmlRawHTML{<img src="Figures/Section2/plots-animation.gif" alt="Animation showing how the straight line between two points on the curve $\sin x$ gets closer to a tangent to the curve as we zoom in and reduce $h$." style="width:48px;height:48px;">}
+        \bmlRawHTML{<img src="bmluser/plots-animation.gif" alt="Animation showing how the straight line between two points on the curve $\sin x$ gets closer to a tangent to the curve as we zoom in and reduce $h$." style="width:48px;height:48px;">}
     \else
         \subfig{0.3}{Figures/Section2/plot_h_0.png}{Zoomed out, $h=1$.}
         \subfig{0.3}{Figures/Section2/plot_h_80.png}{Zooming in, $h=0.1$.}
@@ -107,12 +107,12 @@ b(\omega)=3+\omega \quad [\mathrm{kg/h}],
 which increases with the stirring rate $\omega\geq0$ $[\mathrm{rpm}]$.
 The cost of running the reactor also increases with $\omega$, roughly given by
 \[
-c(\omega)=72+\frac{1}{3}\omega^2 \quad [£/\mathrm{h}].
+c(\omega)=72+\frac{1}{3}\omega^2 \quad [\text{\pounds}/\mathrm{h}].
 \]
-Find the the stirring rate that optimises production efficiency (i.e. kg of biomass per £ spent), and the associated production efficiency.
+Find the the stirring rate that optimises production efficiency (i.e. kg of biomass per \pounds spent), and the associated production efficiency.
 \end{example}
 \begin{solution}
-The production efficiency (in kg of biomass per £ spent) is given by
+The production efficiency (in kg of biomass per \pounds spent) is given by
 \[
 \blank{f(\omega)=\frac{b(\omega)}{c(\omega)}=\frac{3+\omega}{72+\frac{1}{3}\omega^2}}.
 \]
@@ -135,7 +135,7 @@ Factorising (or using the quadratic equation)
 Since $\omega\geq0$, we have an optimal stirring rate of $\omega=12$ $[\mathrm{rpm}]$.
 Substituting this back into the equation for $f$, we get a production efficiency of
 \[
-\blank{f=\frac{3+12}{72+144/3}=\frac{15}{120}=\frac{1}{8}}\quad [\mathrm{kg}/£].
+\blank{f=\frac{3+12}{72+144/3}=\frac{15}{120}=\frac{1}{8}}\quad [\mathrm{kg}/\text{\pounds}].
 \]
 \end{solution}
 
