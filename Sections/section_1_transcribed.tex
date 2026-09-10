@@ -21,33 +21,19 @@ for variables $x$ and $y$, and constants $a$, $b$ and $p$, represents a straight
     \caption{Sketch of $y=mx+c$, showing that the y-coordinate of the line increases by $m$ for every distance 1 moved in the x-direction.}
     \label{fig:line}
 \end{figure}
-% The animation in figure \ref{anim:straightline} (online version only) allows you to control the gradient and intercept of a straight line with sliders. 
+The animation in figure \ref{anim:straightline} (online version only) allows you to control the gradient and intercept of a straight line with sliders. 
 
-% \begin{figure}
-%     \iflatexml
-%         \<script src="https://cdn.jsdelivr.net/npm/chart.js">\</script>
-%         \<div class="chart-container">
-%         \<canvas id="lineChart" width="500" height="500">\</canvas>
-%         \</div>
-%         \<div class="slider-container">
-%         \<label class="slider-label" for="slopeSlider">Slope (m):\</label>
-%         \<input type="range" id="slopeSlider" min="-2" max="2" step="0.1" value="1"/>
-%         \<span id="slopeValue" class="slider-value">1\</span>
-%         \</div>
-%         \<div class="slider-container">
-%         \<label class="slider-label" for="interceptSlider">Intercept (c):\</label>
-%         \<input type="range" id="interceptSlider" min="-5" max="5" step="0.2" value="0"/>
-%         \<span id="interceptValue" class="slider-value">0\</span>
-%         \</div>
-%         \<script src="bmluser/straight\_line\_widget.js">\</script>
-%         \caption{Interactive plot of a straight line.}
-%     \else
-%         \centering
-%         \includegraphics[width=0.5\textwidth]{Figures/Section1/straight_line_widget.png}
-%         \caption{Screenshot of the interactive plot of a straight line, available in the html version of these notes.}
-%     \fi
-%     \label{anim:straightline}
-% \end{figure}
+\begin{figure}
+    \iflatexml
+        \<div id="straight-line-widget" data-m="1" data-c="0">\</div> \https://cdn.plot.ly/plotly-3.0.1.min.js</script> \bmluser/straight-line-widget.js</script>
+        \caption{Interactive plot of a straight line.}
+    \else
+        \centering
+        \includegraphics[width=0.5\textwidth]{Figures/Section1/straight_line_widget.png}
+        \caption{Screenshot of the interactive plot of a straight line, available in the html version of these notes.}
+    \fi
+    \label{anim:straightline}
+\end{figure}
 
 
 
@@ -376,7 +362,7 @@ for $0\leq t<2\pi$. The interactive animation in figure \ref{anim:parametric} de
     \iflatexml
             \<div id="parametric-curve-widget" data-r="1">\</div> 
             \<script src="https://cdn.plot.ly/plotly-3.0.1.min.js">\</script>
-            \<script src="bmluser/parametric\_curve\_widget.js">\</script>
+            \<script src="bmluser/parametric-curve-widget.js">\</script>
         \caption{Interactive plot of the parametric curve $x=\cos t$, $y=\sin t$. The colour goes from white to red as $t$ increases.}
     \else
     \centering
@@ -658,10 +644,10 @@ The denominator cannot be factorised further, so the correct form is
 \frac{x^2}{(x-1)(x^2+3x-3)}=\blank{\frac{A}{x-1}+\frac{Bx+C}{x^2+3x-3}.}
 \]
 Multiplying both sides by the denominator and collect powers of $x$:
-\begin{align}
+\begin{align*}
     \blank{x^2} &= \blank{A(x^2+3x-3) + (Bx+C)(x-1)} \\
     \blank{x^2} &= \blank{(A+B)x^2+(3A-B+C)x-3A-C} \, .
-\end{align}
+\end{align*}
 Compare coefficients of powers of $x$:
 \[
 x^0:\quad \blank{0=-3A-C \qquad \therefore C=-3A,}

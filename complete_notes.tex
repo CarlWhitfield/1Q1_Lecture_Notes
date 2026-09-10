@@ -42,6 +42,7 @@
 
 \setlength{\parindent}{0pt}
 \numberwithin{equation}{subsection}
+\numberwithin{figure}{section}
 
 % \newtheorem{defn}{Useful definition}[subsection]
 \theoremstyle{definition} 
@@ -218,7 +219,12 @@
     \newcommand{\newtexpage}{\newpage}
 \fi
 
-\title{MATH19641: Mathematics 1Q1 \\Lecture Notes}
+\title{MATH19641: Mathematics 1Q1 \par
+Lecture Notes \ifcsname insertBlanks\endcsname
+(Gappy version)
+\else
+(Completed version)
+\fi}
 \author{Carl A. Whitfield}
 \date{Semester 1 -- Academic Year 2026/27}
 
@@ -228,7 +234,7 @@
 
 \input{Sections/section_0}
 \input{Sections/section_1_transcribed}
-% \include{Sections/section_2}
+\input{Sections/Section_2_Differentiation_merged}
 
 
 \end{document}

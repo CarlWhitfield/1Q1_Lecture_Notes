@@ -88,7 +88,7 @@ window.addEventListener("DOMContentLoaded", () => {
       colorbar: {
         title: { text: "t" },
         tickvals: [0, Math.PI / 2, Math.PI, 3 * Math.PI / 2, TWO_PI],
-        ticktext: ["0", "pi/2", "pi", "3pi/2", "2pi"]
+        ticktext: ["0", "π/2", "π", "3π/2", "2π"]
       }
     },
     customdata: t,
