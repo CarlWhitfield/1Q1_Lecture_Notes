@@ -19,7 +19,8 @@ Another way to imagine this is demonstrated in figure \ref{fig:diff_zoom}. As we
 \begin{figure}[h!]
     \centering
     \iflatexml
-        % \<img src="https://www.image2url.com/r2/default/gifs/1789052907697-71655270-58bd-4d1f-b112-8cd1b9e1ef77.gif" alt="Animation showing how the straight line between two points on the curve $\sin x$ gets closer to a tangent to the curve as we zoom in and reduce $h$." style="width:48px;height:48px;">
+        \<div id="tangent-animation">\</div>
+        \<script src="tangent-animation.js">\</script>
     \else
         \subfig{0.3}{Figures/Section2/plot_h_0.png}{Zoomed out, $h=1$.}
         \subfig{0.3}{Figures/Section2/plot_h_80.png}{Zooming in, $h=0.1$.}
@@ -60,19 +61,25 @@ Some common derivatives of functions are given in table \begin{table}[ht]
 \textbf{The first derivative test.} To use this test to classify a stationary point at $x=x_0$, 
 \begin{enumerate}
     \item evaluate $f'(x)$ at two points either side of $x_0$, \emph{i.e.} $f'(x_0-h)$ and $f'(x_0+h)$ for small $h$. Make sure $h$ is small enough so that $x \pm h$ does not cross any other stationary points.
-    \item Draw the line \textbackslash for a negative value, / for a positive value and -- for the stationary point itself forms a sketch of how the function looks around the stationary point (e.g. a minimum will be \textbackslash -- /, and a maximum  / --\textbackslash
+    \item Drawing the line \textbackslash for a negative value, / for a positive value and -- for the stationary point itself, sketch how the function looks around the stationary point (\textit{e.g.} a minimum will be \textbackslash -- /, and a maximum  / --\textbackslash).
 \end{enumerate}
 
+\textbf{The second derivative test.} To use this test to classify a stationary point at $x=x_0$, evaluate the second derivative $f''(x)$ at $x=x_0$.
+\begin{itemize}
+    \item If $f''(x_0) > 0$, the point is a minimum.
+    \item If $f''(x_0) < 0$, the point is a maximum.
+    \item If $f''(x_0) = 0$, the test is inconclusive. Fall back on the first derivative test. 
+\end{itemize}
 
 \begin{example}[Lecture]
 Find any stationary points for the function
 \[
-f(x)=2x^3-9x^2+5.
+f(x)=2x^3-9x^2+5 \, .
 \]
 Use the first derivative test to classify them as maxima, minima or points of inflection. Check this using the second derivative test.
 \end{example}
 \begin{solution}
-Find first derivative
+Find the first derivative
 \[
 f'(x)=\blank{6x^2-18x}.
 \]
@@ -81,16 +88,39 @@ Stationary points are at
 \[
 x=\blank{0}\qquad \text{and} \qquad x=\blank{3}.
 \]
-Second derivative:
+First derivative test for $x=0$:\par
+\vspace{4mm}
+\begin{tabular}{|p{10mm}|p{10mm}|p{10mm}|p{10mm}|}\hline
+    $x$ & -1 & 0 & 1\\\hline
+    $f'(x)$ & \blankpar{24} & 0 & \blankpar{-12}\\\hline
+    sketch & \blankpar{/} & -- & \blankpar{\textbackslash}\\\hline
+\end{tabular}
+
+\vspace{4mm}
+First derivative test for $x=3$:\par
+\vspace{4mm}
+\begin{tabular}{|p{10mm}|p{10mm}|p{10mm}|p{10mm}|}\hline
+    $x$ & 2 & 3 & 4\\\hline
+    $f'(x)$ & \blankpar{-12} & 0 & \blankpar{24}\\\hline
+    sketch & \blankpar{\textbackslash} & -- & \blankpar{/}\\\hline
+\end{tabular}
+\vspace{4mm}
+
+Find the second derivative:
 \[
 f''(x)=\blank{12x-18}.
 \]
 \[
 f''(0)=\blank{-18},\qquad f''(3)=\blank{18}.
 \]
-Hence $x=0$ (maximum) and $x=3$ (minimum).
+Hence $x=\blank{0}$ is a \blankpar{maximum} and $x=\blank{3}$ is a \blankpar{minimum}.
 \end{solution}
+
 \subsubsection{Maximum and minimum values over an interval}
+
+
+
+
 \begin{example}[Lecture]
 Find the maximum and minimum values of the function
 \[
