@@ -11,6 +11,8 @@
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{setspace}
+\usepackage{mathtools}
+\usepackage{parskip}
 % \usepackage{environ}
 \usepackage{subcaption}
 \definecolor{solframecol}{RGB}{32, 116, 44}
@@ -35,12 +37,17 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{amsthm}
-\usepackage{enumerate}
+\usepackage{enumitem}
 \usepackage{bookml/bookml}
 \usepackage{comment}
 \usepackage{framed} 
 
 \setlength{\parindent}{0pt}
+\setlength{\parskip}{12pt plus 2pt minus 2pt}
+\setlist[itemize]{parsep=0pt,topsep=4pt,itemsep=4pt}
+\setlist[enumerate]{parsep=0pt,topsep=4pt,itemsep=4pt}
+\setstretch{1.1}
+
 \numberwithin{equation}{subsection}
 \numberwithin{figure}{section}
 
@@ -65,7 +72,7 @@
 \else      % for the PDF
     \usepackage{environ}
     \newenvironment{solution}{
-    \bgroup\colorlet{TFFrameColor}{solframecol}\colorlet{TFTitleColor}{white}\begin{titled-frame}{Solution}}{\end{titled-frame}\egroup}
+    \bgroup\colorlet{TFFrameColor}{solframecol}\colorlet{TFTitleColor}{white}\begin{titled-frame}{Solution}}{\end{titled-frame}\egroup \goodbreak}
     
     \newsavebox{\solutionbox} 
     \newlength{\solutionheight} 
@@ -79,6 +86,7 @@
             \end{titled-frame} 
             \egroup 
         \end{minipage}
+        \goodbreak
         }
         \setlength{\solutionheight} {\dimexpr\ht\solutionbox+\dp\solutionbox\relax}
         \ifcsname insertBlanks\endcsname
@@ -94,14 +102,14 @@
     }
 \fi
 
-\ifcsname insertBlanks \endcsname
+\ifcsname insertBlanks\endcsname
     \iflatexml
         \newcommand{\blank}[1]{\underline{\phantom{#1}}}
         \newcommand{\blankpar}[1]{\<span style="display: inline-block; border-bottom: 1px solid black;">\<span style="visibility: hidden">{#1}\</span>\</span>}
     \else
       % \newlength{\myl}
       % \newcommand{\blank}[1]{\settowidth{\myl}{#1} \underline{\hspace{2\myl}}}
-      \newcommand{\blank}[1]{\colorbox{solblankcol}{\phantom{$\displaystyle \qquad #1 \qquad$}}}
+      \newcommand{\blank}[1]{\colorbox{solblankcol}{\phantom{$\displaystyle \vphantom{\dfrac{1}{2}} \qquad #1 \qquad$}}}
       \newcommand{\blankpar}[1]{\colorbox{solblankcol}{\phantom{ #1 }}}
     \fi
 \else
@@ -117,11 +125,22 @@
     \newenvironment{ILOs}{
         \<div class="lo-box">
             \<div class="lo-box-title"> Intended Learning Outcomes\</div>\<div class="box-content">On completion of this course unit, students will be able to \begin{itemize}}{\end{itemize}\</div>\</div>}
+    \newenvironment{ILOssec}{
+                \<div class="lo-box">
+            \<div class="lo-box-title"> Intended Learning Outcomes\</div>\<div class="box-content">The relevant ILOs for this section are \begin{itemize}}{\end{itemize}\</div>\</div>}
+        
+    \newenvironment{recap}[1]{
+        \<div class="lo-box">
+            \<div class="lo-box-title"> Recap\</div>\<div class="box-content">Key points from section #1 \begin{itemize}}{\end{itemize}\</div>\</div>}
 \else      % for the PDF
-    \newenvironment{learningoutcomes}{
+    \newenvironment{learningoutcomes}{\bigskip
     \bgroup\colorlet{TFFrameColor}{loframecol}\colorlet{TFTitleColor}{white}\begin{titled-frame}{Learning Outcomes} On completion of this subsection, students will be able to \begin{itemize}}{\end{itemize}\end{titled-frame}\egroup} 
     \newenvironment{ILOs}{
     \bgroup\colorlet{TFFrameColor}{loframecol}\colorlet{TFTitleColor}{white}\begin{titled-frame}{Intended Learning Outcomes} On completion of this course unit, students will be able to \begin{itemize}}{\end{itemize}\end{titled-frame}\egroup} 
+    \newenvironment{ILOssec}{
+    \bgroup\colorlet{TFFrameColor}{loframecol}\colorlet{TFTitleColor}{white}\begin{titled-frame}{Intended Learning Outcomes} The relevant ILOs for this section are \begin{itemize}}{\end{itemize}\end{titled-frame}\egroup} 
+    \newenvironment{recap}[1]{
+    \bgroup\colorlet{TFFrameColor}{loframecol}\colorlet{TFTitleColor}{white}\begin{titled-frame}{Recap} Key points from section #1 \begin{itemize}}{\end{itemize}\end{titled-frame}\egroup} 
 \fi
 
 
@@ -192,7 +211,6 @@
     \newenvironment{exammistake}
       {\begin{lrbox}{\exambox}%
        \begin{minipage}{\dimexpr\columnwidth-2\fboxsep\relax}
-       \setlength{\parindent}{0pt}
        \begin{center}
        {\bf $\star$ Exam mistake of the week $\star$}
        \end{center}\par}
@@ -219,7 +237,15 @@
     \newcommand{\newtexpage}{\newpage}
 \fi
 
+
 \newcommand{\der}[2]{\frac{{\rm d} #1}{{\rm d} #2}}
+\newcommand{\ILOa}{\textbf{[ILO1]} Use equations in implicit or parametric form including straight lines or conic sections to extract relevant information.}
+\newcommand{\ILOb}{\textbf{[ILO2]} Identify the appropriate partial fractions form and find the values of any coefficients for a rational function of a single variable.}
+\newcommand{\ILOc}{\textbf{[ILO3]} Differentiate functions and hence locate and classify stationary points for a function of a single variable.}
+\newcommand{\ILOd}{\textbf{[ILO4]} Recall and apply appropriate rules to integrate functions and use these to measure areas associated with curves or combinations of curves.}
+\newcommand{\ILOe}{\textbf{[ILO5]} Calculate sums, differences and products involving vectors and use these to solve geometrical problems.}
+\newcommand{\ILOf}{\textbf{[ILO6]} Carry out arithmetic using complex numbers and hence solve polynomial and power equations.}
+\newcommand{\ILOg}{\textbf{[ILO7]} Model chemical processes using differential equation systems and solve these systems using a variety of techniques.}
 
 \title{MATH19641: Mathematics 1Q1 \par
 Lecture Notes \ifcsname insertBlanks\endcsname
@@ -230,14 +256,17 @@ Lecture Notes \ifcsname insertBlanks\endcsname
 \author{Carl A. Whitfield}
 \date{Semester 1 -- Academic Year 2026/27}
 
-\onehalfspacing
+% \onehalfspacing
 
 \begin{document}
 
 \input{Sections/section_0}
-\input{Sections/section_1_transcribed}
-\input{Sections/Section_2_Differentiation_merged}
-
+\newtexpage
+\input{Sections/section_1}
+\newtexpage
+\input{Sections/section_2}
+\newtexpage
+\input{Sections/section_3}
 
 \end{document}
 
