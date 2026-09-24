@@ -7,7 +7,7 @@
 window.addEventListener("DOMContentLoaded", () => {
   "use strict";
 
-  const containerId = "parametric-curve-widget";
+  const containerId = "parametric-curve-widget-with-tangent";
   const container = document.getElementById(containerId);
 
   if (!container) {
