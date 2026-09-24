@@ -1,7 +1,5 @@
 \documentclass[12pt]{article}
 
-
-
 %%% RECOMMENDED
 % better accented letters and ligatures in PDF
 \usepackage[T1]{fontenc}
@@ -51,6 +49,9 @@
 \bmlAltFormat{\filelabel.pdf}{PDF (serif)}
 \bmlAltFormat{\filelabel-sans.pdf}{PDF (sans serif)}
 \bmlAltFormat{\filelabel-sans-large.pdf}{PDF (sans, large)}
+\ifcsname bmlCrop\endcsname
+\usepackage{crop}
+\fi
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{12pt plus 2pt minus 2pt}
@@ -66,6 +67,8 @@
 \newtheorem{ex}{Example}[subsection]
 
 \iflatexml % for the HTML
+    \bmlRawHTML{ <script src="https://cdn.plot.ly/plotly-3.0.1.min.js"></script> }
+    
     \newenvironment{solution}{
         \<details>\<summary>Solution\</summary>\<div class="box-content">}
         {\</div>\</details>}
@@ -257,18 +260,19 @@
 \newcommand{\ILOf}{\textbf{[ILO6]} Carry out arithmetic using complex numbers and hence solve polynomial and power equations.}
 \newcommand{\ILOg}{\textbf{[ILO7]} Model chemical processes using differential equation systems and solve these systems using a variety of techniques.}
 
-\title{MATH19641: Mathematics 1Q1 \par
-Lecture Notes \ifcsname insertBlanks\endcsname
-(Gappy version)
+\ifcsname insertBlanks\endcsname
+    \newcommand{\titlesuffix}{(Gappy version)}
 \else
-(Completed version)
-\fi}
-\author{Carl A. Whitfield}
-\date{Semester 1 -- Academic Year 2026/27}
+    \newcommand{\titlesuffix}{(Completed version)}
+\fi
 
 % \onehalfspacing
 
 \begin{document}
+
+\title{MATH19641: Mathematics 1Q1 Lecture Notes \titlesuffix}
+\author{Carl A. Whitfield}
+\date{Semester 1 -- Academic Year 2026/27}
 
 \input{Sections/section_0}
 \newtexpage
