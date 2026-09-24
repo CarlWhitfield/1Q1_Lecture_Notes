@@ -7,7 +7,7 @@
 #
 # For example: remove '#' below to split your document by chapter
 
-#SPLITAT = chapter
+SPLITAT = part
 
 ### END GLOBAL CONFIGURATION
 
