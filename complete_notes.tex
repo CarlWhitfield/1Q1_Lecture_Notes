@@ -42,6 +42,12 @@
 \usepackage{comment}
 \usepackage{framed} 
 
+\ifcsname insertBlanks\endcsname
+    \newcommand{\filelabel}{gappy_notes}
+\else
+    \newcommand{\filelabel}{complete_notes}
+\fi
+
 \bmlAltFormat{\filelabel.pdf}{PDF (serif)}
 \bmlAltFormat{\filelabel-sans.pdf}{PDF (sans serif)}
 \bmlAltFormat{\filelabel-sans-large.pdf}{PDF (sans, large)}
@@ -227,7 +233,7 @@
 
 \iflatexml
     \newcommand{\subfig}[3]{\begin{subfigure}{\textwidth}
-    \includegraphics[width=#1\textwidth]{#2}
+    \includegraphics[width=0.5\textwidth]{#2}
     \caption{#3} \end{subfigure}}
 \else
     \newcommand{\subfig}[3]{\begin{subfigure}{#1\textwidth}

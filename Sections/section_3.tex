@@ -27,42 +27,57 @@ where $\int$ is the integral sign, $3x^2$ is the integrand, ${\rm d}x$ indicates
 The process of differentiation gives information about its rate of change.
 The process of integration gives information about the accumulation, $A(x)$, of the function, such that $A'(x) = f(x)$ (see figure \ref{fig:integration}).
 
-Some standard integrals are given below
-\[
-\begin{array}{c|c}
-\textbf{Function }y=f(x) & \textbf{Integral }\displaystyle\int f(x)\,{\rm d}x\\ \hline
-x^n \; (n\neq-1)& \dfrac{1}{n+1}x^{n+1}+C\\[2mm]
-\dfrac{1}{x} & \ln |x|+C\\[2mm]
-e^x & e^x+C\\[2mm]
-\sin x & -\cos x+C\\[2mm]
-\cos x & \sin x+C\\[2mm]
-\end{array}
-\]
+Some standard integrals are given in table \ref{tab:standard_int}.
+
+{\renewcommand{\arraystretch}{1.75}
+\begin{table}[ht]
+\centering
+\begin{tabular}{|c|c|} \hline
+    \textbf{Function }$y=f(x)$ & \textbf{Integral }$\displaystyle\int f(x)\,{\rm d}x$\\ \hline
+    $x^n \; (n\neq-1)$& $\dfrac{1}{n+1}x^{n+1}+C$\\
+    $\dfrac{1}{x}$ & $\ln |x|+C$\\
+    $e^x$ & $e^x+C$\\
+    $\sin x$ & $-\cos x+C$\\
+    $\cos x$ & $\sin x+C$\\\hline
+\end{tabular}
+\caption{Some standard integrals.}
+\label{tab:standard_int}
+\end{table}
 
 Using the chain rule for differentiation 
 \[
 \der{}{x} f(ax+b)=af'(ax+b) \, ,
 \]
-some of these can be generalised to the case of linear functions in the argument.
-\[
-\begin{array}{c|c}
-\textbf{Function }y=f(x) & \textbf{Integral }\displaystyle\int f(x)\,{\rm d}x\\ \hline
-e^{ax+b} & \dfrac{1}{a}e^{ax+b}+C\\[2mm]
-\sin(ax+b) & -\dfrac{1}{a}\cos(ax+b)+C\\[2mm]
-\cos(ax+b) & \dfrac{1}{a}\sin(ax+b)+C
-\end{array}
-\]
+some of the integrals in table \ref{tab:standard_int} can be generalised to the case of linear functions in the argument (see table \ref{tab:chain_int}).
 
-Some other standard integrals to be aware of are given below (and most are available in the mathematical formula tables). Note these can be derived using some of the techniques introduced later in this section.
-\[
-\begin{array}{c|c}
-\textbf{Function }y=f(x) & \textbf{Integral }\displaystyle\int f(x)\,{\rm d}x\\ \hline
-\tan x& \ln\left(\sec x\right) +C\\[2mm]
-\dfrac{1}{a^2+x^2} & \dfrac{1}{a}\tan^{-1}\left(\dfrac{x}{a}\right) + C\\[2mm]
-\dfrac{1}{\sqrt{a^2-x^2}}  & \sin^{-1}\left(\dfrac{x}{a}\right) + C\\[2mm]
-\ln x \quad (x>0) & x \ln x - x + C
-\end{array}
-\]
+{\renewcommand{\arraystretch}{1.75}
+\begin{table}[ht]
+\centering
+\begin{tabular}{|c|c|} \hline
+\textbf{Function }$y=f(x)$ & \textbf{Integral }$\displaystyle\int f(x)\,{\rm d}x$\\ \hline
+$e^{ax+b}$ & $\dfrac{1}{a}e^{ax+b}+C$\\
+$\sin(ax+b)$ & $-\dfrac{1}{a}\cos(ax+b)+C$\\
+$\cos(ax+b)$ & $\dfrac{1}{a}\sin(ax+b)+C$ \\\hline
+\end{tabular}
+\caption{Standard integrals extended to general linear functions, where $a$ and $b$ are constants.}
+\label{tab:chain_int}
+\end{table}
+
+Some other standard integrals to be aware of are given in table \ref{tab:more_standard_ints}(and most are available in the mathematical formula tables). Note these can be derived using some of the techniques introduced later in this section.
+
+{\renewcommand{\arraystretch}{1.75}
+\begin{table}[ht]
+\centering
+\begin{tabular}{|c|c|} \hline
+\textbf{Function }$y=f(x)$ & \textbf{Integral }$\displaystyle\int f(x)\,{\rm d}x$\\ \hline
+$\tan x$ & $\ln\left(\sec x\right) +C$\\
+$\dfrac{1}{a^2+x^2}$ & $\dfrac{1}{a}\tan^{-1}\left(\dfrac{x}{a}\right) + C$\\
+$\dfrac{1}{\sqrt{a^2-x^2}}$  & $\sin^{-1}\left(\dfrac{x}{a}\right) + C$\\
+$\ln x \quad (x>0)$ & $x \ln x - x + C$ \\\hline
+\end{tabular}
+\caption{Some more standard integrals that are given in the mathematical formula tables (which can be used in the exam).}
+\label{tab:more_standard_ints}
+\end{table}
 
 \begin{figure}[h]
     \centering
