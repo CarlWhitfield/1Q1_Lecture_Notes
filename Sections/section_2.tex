@@ -26,7 +26,7 @@ The derivative of a function $f(x)$ is the gradient at a point (i.e. as the chan
 
 Another way to imagine this is demonstrated in figure \ref{fig:diff_zoom}. As we ``zoom in'' on any smooth function, it looks more like a straight line with gradient equivalent to the tangent line at that point, \textit{i.e.} the derivative. Some common derivatives of functions are given in table \ref{tab:derivatives}. 
 
-\begin{figure}[h!]
+\begin{figure}[ht]
     \centering
     \iflatexml
         \<div id="tangent-animation">\</div>
@@ -72,7 +72,7 @@ Another way to imagine this is demonstrated in figure \ref{fig:diff_zoom}. As we
     \item several stationary points.
 \end{itemize}
 
-\begin{figure}[h!]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=0.5\linewidth]{Figures/Section2/212_stat_points.jpg}
     \caption{Sketch of the four types of stationary point.}
@@ -143,7 +143,7 @@ Hence $x=\blank{0}$ is a \blankpar{maximum} and $x=\blank{3}$ is a \blankpar{min
 
 Consider the function $f(x)$ in figure \ref{fig:minmax}(a); where is the maximum? Where is the minimum? We can see there are stationary points at $a$ (\textbf{local} maximum) and $b$ (\textbf{local} minimum), but these are not the greatest or smallest values of $f(x)$ over the interval shown. In fact, the minimum over the interval shown is at the left boundary, and the maximum at the boundary. 
 
-\begin{figure}[h!]
+\begin{figure}[ht]
     \centering
     \subfig{0.8}{./Figures/Section2/213_minmax.png}{A function with local minima/maxima and greatest/least values labelled.}
     \hfill
@@ -870,7 +870,7 @@ y=\sin t \qquad x=\cos t,
 \]
 The animation in figure \ref{anim:parametric_diff} demonstrates this by adding the tangent line to the parametric form of the unit circle (as used in figure \ref{anim:parametric}). Projecting to the $x$-$t$ plane, the tangent line has gradient ${\rm d}x/{\rm d}t$, for the $y$-$t$ plane it is ${\rm d}y/{\rm d}t$ and so as we project to the $x$-$y$ plane the tangent has gradient $\frac{{\rm d}y/{\rm d}t}{{\rm d}x/{\rm d}t}=\der{y}{x}$. This is visualised by the relationship between the components of the tangent line in figure \ref{fig:tangent_project}
 
-\begin{figure}[h!]
+\begin{figure}[ht]
     \iflatexml
             \<div id="parametric-curve-widget-with-tangent" data-r="1">\</div> 
             \<script src="https://cdn.plot.ly/plotly-3.0.1.min.js">\</script>

@@ -42,7 +42,7 @@ Some standard integrals are given in table \ref{tab:standard_int}.
 \end{tabular}
 \caption{Some standard integrals.}
 \label{tab:standard_int}
-\end{table}
+\end{table}}
 
 Using the chain rule for differentiation 
 \[
@@ -61,7 +61,7 @@ $\cos(ax+b)$ & $\dfrac{1}{a}\sin(ax+b)+C$ \\\hline
 \end{tabular}
 \caption{Standard integrals extended to general linear functions, where $a$ and $b$ are constants.}
 \label{tab:chain_int}
-\end{table}
+\end{table}}
 
 Some other standard integrals to be aware of are given in table \ref{tab:more_standard_ints}(and most are available in the mathematical formula tables). Note these can be derived using some of the techniques introduced later in this section.
 
@@ -77,9 +77,9 @@ $\ln x \quad (x>0)$ & $x \ln x - x + C$ \\\hline
 \end{tabular}
 \caption{Some more standard integrals that are given in the mathematical formula tables (which can be used in the exam).}
 \label{tab:more_standard_ints}
-\end{table}
+\end{table}}
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=0.5\linewidth]{Figures/Section3/311_integral.png}
     \caption{A sketch of the relationship between the derivative $f'(x)$ and the integral $f(x)$. If we zoom in, the curve is locally linear with gradient $\Delta y / \Delta x$ which is approximately equal to $f'(x)$. Integrating tells us how the area under the curve increases with $x$, so in moving from $x$ to $x+\Delta x$ we accrue an extra area of $\Delta A \approx f(x) \Delta x$. The integral is the sum of these thin strips in the limit $\Delta x \rightarrow 0$, which depends on where you begin the sum from, hence the need for a constant of integration, such that $\int f'(x) \, {\rm d} x = f(x)+C$. }
@@ -186,7 +186,7 @@ The definite integral provides a way of finding the area under or above a curve 
 
 \textbf{Area under a curve.} Consider the curve in figure \ref{fig:int_curve} defined by the function $y=f(x)$ for values of $x$ between the values $x=a$ and $x=b$.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=0.5\textwidth]{Figures/Section3/312_areaunder.png}
     \caption{Sketch showing the area under the curve $f(x)$ given by $\int_a^b f(x) \, {\rm d} x$.}
@@ -325,7 +325,7 @@ From the area under the curve (figure \ref{fig:improper_examples}(a)), it can be
 \]
 The area under the curve is infinitely long but infinitely thin (figure \ref{fig:improper_examples}(b)). It is not clear whether the integral will be finite or infinite. 
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \subfig{0.33}{Figures/Section3/33_1int.png}{$\int_1^\infty 1\, {\rm d}x$}
     \hfill
@@ -441,7 +441,7 @@ Although the limits are finite, the integrand becomes infinite
 \end{itemize}
 as shown in figure \ref{fig:improper_sing}. When either of these are true, it is an \textbf{improper integral}.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=0.5\textwidth]{Figures/Section3/33_implicit_sing.png}
     \caption{Plot of the function $\frac{1}{x(1-x^2)}$ which goes to infinity at $x = -1$, $0$, and $1$.}
@@ -542,7 +542,7 @@ The first integral only converges for $n>-1$. The second integral only converges
 \]
 \textbf{does not converge for any} $n$.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
     \subfig{0.48}{Figures/Section3/33_xn.png}{$\int_0^1 x^n\,{\rm d}x$}
     \hfill
@@ -1002,7 +1002,7 @@ Note that reversing the order of the integrations (along with their limits) pres
 \int_c^d\int_{y=a}^b f(x,y)\,{\rm d}y\,{\rm d}x.
 \]
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \subfig{0.32}{Figures/Section3/35_doubleint1.png}{Area of  a strip}
     \hfill
