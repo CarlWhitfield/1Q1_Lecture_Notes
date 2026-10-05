@@ -697,7 +697,11 @@ And so
 
 \subsubsection{Partial fractions for improper fractions}
 
-If a rational function has a denominator of degree $n$ and a numerator of degree $n+m$, then the resultant partial fraction will include a polynomial of degree $m$. To find the coefficients, multiply both sides by the denominator and either substitute meaningful values of $x$ or compare coefficients of powers of $x$.
+If a rational function has a denominator of degree $n$ and a numerator of degree $n+m$, where $m\geq0$ then the resultant partial fraction will include a polynomial of degree $m$, for example
+\begin{align*}
+    \frac{3x^3+x^2-x+6}{(x-2)(x+1)}=Ax+B+\frac{C}{x-2} + \frac{D}{x+1}
+\end{align*}
+To find the coefficients, multiply both sides by the denominator and either substitute meaningful values of $x$ or compare coefficients of powers of $x$.
 
 \goodbreak
 \begin{example}[Lecture]
@@ -717,6 +721,21 @@ Identify correct form:
 \blank{\frac{3(x+1)^2}{(x-1)(x+2)}=A+\frac{B}{x-1}+\frac{C}{x+2}.}
 \]
 Multiply through and solve for coefficients:
+\begin{align*}
+    3(x+1)^2 &= A(x+2)(x-1) + B(x+2) + C(x-1) \\
+    3x^2 + 6x + 3 &= Ax^2 + (A+B+C)x - 2A + 2B - C \, .
+\end{align*}
+Compare coefficients of powers of $x$:
+\[
+x^2:\quad \blank{A=3 \, ,}
+\]
+\[
+x:\quad \blank{A+B+C=6 \qquad \therefore B+C=3,}
+\]
+\[
+x^0:\quad \blank{-2A+2B-C=3 \qquad \therefore 2B-C=9 \quad \therefore B=4 \, , \, C=-1.}
+\]
+Putting it all together
 \[
 \frac{3(x+1)^2}{x^2+x-2}=\blank{3+\frac{4}{x-1}-\frac{1}{x+2}.}
 \]
