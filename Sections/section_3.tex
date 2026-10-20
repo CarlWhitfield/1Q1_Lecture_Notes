@@ -693,462 +693,462 @@ use the substitution $u(x)=x^3+5$ so that ${\rm d}u=3x^2\,{\rm d}x$ and the inte
 =\frac{368168}{15}.
 \]
 
-\begin{example}[Lecture]
-Using substitution, evaluate the integral
-\[
-\int_0^{1/2}x\cos(\pi x^2)\,{\rm d}x.
-\]
-\end{example}
+% \begin{example}[Lecture]
+% Using substitution, evaluate the integral
+% \[
+% \int_0^{1/2}x\cos(\pi x^2)\,{\rm d}x.
+% \]
+% \end{example}
 
-\begin{solution}
-Substitute $u=\blank{\pi x^2}$, then $u'=\blank{2\pi x}$.
+% \begin{solution}
+% Substitute $u=\blank{\pi x^2}$, then $u'=\blank{2\pi x}$.
 
-The limits of the integral become $u(0)=\blank{0}$ and $u(1/2)=\blank{\pi/4}$.
+% The limits of the integral become $u(0)=\blank{0}$ and $u(1/2)=\blank{\pi/4}$.
 
-As ${\rm d}u=u'\,{\rm d}x$, then ${\rm d}x=\dfrac{1}{2\pi x}\,{\rm d}u$, substituting gives
-\begin{align*}
-    \int_0^{1/2}x\cos(\pi x^2)\,{\rm d}x
-    &=\blank{\int_0^{\pi/4}\frac{x}{2\pi x}\cos u\,{\rm d}u} \\
-    &=\blank{\frac{1}{2\pi}\int_0^{\pi/4}\cos u\,{\rm d}u}\, .
-\end{align*}
+% As ${\rm d}u=u'\,{\rm d}x$, then ${\rm d}x=\dfrac{1}{2\pi x}\,{\rm d}u$, substituting gives
+% \begin{align*}
+%     \int_0^{1/2}x\cos(\pi x^2)\,{\rm d}x
+%     &=\blank{\int_0^{\pi/4}\frac{x}{2\pi x}\cos u\,{\rm d}u} \\
+%     &=\blank{\frac{1}{2\pi}\int_0^{\pi/4}\cos u\,{\rm d}u}\, .
+% \end{align*}
 
-Evaluating the integral in $u$ we get
-\[
-\blank{\frac{1}{2\pi}\int_0^{\pi/4}\cos u\,{\rm d}u
-=\frac{1}{2\pi}\left[\sin u\right]_0^{\pi/4}
-=\frac{1}{2\pi}\times\frac{\sqrt{2}}{2}}
-\]
-\[
-=\blank{\frac{\sqrt{2}}{4\pi}.}
-\]
-\end{solution}
+% Evaluating the integral in $u$ we get
+% \[
+% \blank{\frac{1}{2\pi}\int_0^{\pi/4}\cos u\,{\rm d}u
+% =\frac{1}{2\pi}\left[\sin u\right]_0^{\pi/4}
+% =\frac{1}{2\pi}\times\frac{\sqrt{2}}{2}}
+% \]
+% \[
+% =\blank{\frac{\sqrt{2}}{4\pi}.}
+% \]
+% \end{solution}
 
-\begin{example}[Video]
-A cylindrical tube of diameter 8cm and length 1m, held horizontally, is partially filled with water to a depth of 2cm.
+% \begin{example}[Video]
+% A cylindrical tube of diameter 8cm and length 1m, held horizontally, is partially filled with water to a depth of 2cm.
 
-Use integration to calculate the volume of water in the tube.
-\begin{center}
-    \includegraphics[width=0.3\textwidth,alt={Sketch of the tube cross section.}]{Figures/Section3/Ex343.png}
-\end{center}
-\end{example}
+% Use integration to calculate the volume of water in the tube.
+% \begin{center}
+%     \includegraphics[width=0.3\textwidth,alt={Sketch of the tube cross section.}]{Figures/Section3/Ex343.png}
+% \end{center}
+% \end{example}
 
-\begin{solution}
-The cross section of the tube is a circle with radius $R=4$cm, so can be represented by the equation:
-\[
-\blank{x^2+y^2=16}
-\]
-where the circle centre is at the origin $(0,0)$.
+% \begin{solution}
+% The cross section of the tube is a circle with radius $R=4$cm, so can be represented by the equation:
+% \[
+% \blank{x^2+y^2=16}
+% \]
+% where the circle centre is at the origin $(0,0)$.
 
-The surface of the water lies on the straight horizontal line
-\[
-\blank{y=-2}.
-\]
+% The surface of the water lies on the straight horizontal line
+% \[
+% \blank{y=-2}.
+% \]
 
-We need to compute the integral below this curve and above the lower half of the circle, which is given by
-\[
-y=\blank{-\sqrt{16-x^2}}.
-\]
+% We need to compute the integral below this curve and above the lower half of the circle, which is given by
+% \[
+% y=\blank{-\sqrt{16-x^2}}.
+% \]
 
-To find the limits of integration, find where the two curves cross by substituting the equation for the line into the circle
-\[
-\blank{x^2+(-2)^2=16}
-\qquad \therefore \;
-\blank{x^2=12}.
-\]
-\[
-x=\pm\blank{2\sqrt{3}}.
-\]
+% To find the limits of integration, find where the two curves cross by substituting the equation for the line into the circle
+% \[
+% \blank{x^2+(-2)^2=16}
+% \qquad \therefore \;
+% \blank{x^2=12}.
+% \]
+% \[
+% x=\pm\blank{2\sqrt{3}}.
+% \]
 
-Integrating the horizontal line gives the (negative) of the area above it
-\[
-A_1=\blank{\int_{-2\sqrt{3}}^{2\sqrt{3}}-2\,{\rm d}x}
-=\blank{-8\sqrt{3}}.
-\]
+% Integrating the horizontal line gives the (negative) of the area above it
+% \[
+% A_1=\blank{\int_{-2\sqrt{3}}^{2\sqrt{3}}-2\,{\rm d}x}
+% =\blank{-8\sqrt{3}}.
+% \]
 
-Next, we need to integrate the lower semi-circle
-\[
-A_2=\blank{-\int_{-2\sqrt{3}}^{2\sqrt{3}}\sqrt{16-x^2}\,{\rm d}x}.
-\]
+% Next, we need to integrate the lower semi-circle
+% \[
+% A_2=\blank{-\int_{-2\sqrt{3}}^{2\sqrt{3}}\sqrt{16-x^2}\,{\rm d}x}.
+% \]
 
-Using the substitution $x=\blank{4\sin\left(\frac{t}{2}\right)}$ then ${\rm d}x=\blank{2\cos\left(\frac{t}{2}\right)}\,{\rm d}t$.
+% Using the substitution $x=\blank{4\sin\left(\frac{t}{2}\right)}$ then ${\rm d}x=\blank{2\cos\left(\frac{t}{2}\right)}\,{\rm d}t$.
 
-The limits of the integral are at
-\[
-t=\blank{2\sin^{-1}\left(\pm\frac{\sqrt{3}}{2}\right)=\pm\frac{2\pi}{3}}.
-\]
+% The limits of the integral are at
+% \[
+% t=\blank{2\sin^{-1}\left(\pm\frac{\sqrt{3}}{2}\right)=\pm\frac{2\pi}{3}}.
+% \]
 
-\[
-A_2=\blank{-\int_{-2\pi/3}^{2\pi/3}4\sqrt{1-\sin^2\left(\frac{t}{2}\right)}
-\times2\cos\left(\frac{t}{2}\right)\,dt
-=-8\int_{-2\pi/3}^{2\pi/3}\cos^2\left(\frac{t}{2}\right)\,dt}.
-\]
+% \[
+% A_2=\blank{-\int_{-2\pi/3}^{2\pi/3}4\sqrt{1-\sin^2\left(\frac{t}{2}\right)}
+% \times2\cos\left(\frac{t}{2}\right)\,dt
+% =-8\int_{-2\pi/3}^{2\pi/3}\cos^2\left(\frac{t}{2}\right)\,dt}.
+% \]
 
-Using the trigonometric identity
-\[
-\blank{\cos^2\theta=\frac{1+\cos2\theta}{2}}
-\]
-this becomes
-\[
-A_2=\blank{-4\int_{-2\pi/3}^{2\pi/3}(1+\cos t)\,dt
-=-4\left[t+\sin t\right]_{-2\pi/3}^{2\pi/3}
-=-\frac{16\pi}{3}-8\sin\left(\frac{2\pi}{3}\right)}.
-\]
+% Using the trigonometric identity
+% \[
+% \blank{\cos^2\theta=\frac{1+\cos2\theta}{2}}
+% \]
+% this becomes
+% \[
+% A_2=\blank{-4\int_{-2\pi/3}^{2\pi/3}(1+\cos t)\,dt
+% =-4\left[t+\sin t\right]_{-2\pi/3}^{2\pi/3}
+% =-\frac{16\pi}{3}-8\sin\left(\frac{2\pi}{3}\right)}.
+% \]
 
-Therefore, the area of the cross section filled by water is
-\[
-A_1-A_2=\blank{-8\sqrt{3}+\frac{16\pi}{3}+8\sin\left(\frac{2\pi}{3}\right)
-\approx9.83\;\mathrm{cm}^2}.
-\]
+% Therefore, the area of the cross section filled by water is
+% \[
+% A_1-A_2=\blank{-8\sqrt{3}+\frac{16\pi}{3}+8\sin\left(\frac{2\pi}{3}\right)
+% \approx9.83\;\mathrm{cm}^2}.
+% \]
 
-So the volume of water is approximately
-\[
-\blank{100\times9.83=983\;\mathrm{cm}^3\text{ or }983\mathrm{ml}}.
-\]
-\end{solution}
+% So the volume of water is approximately
+% \[
+% \blank{100\times9.83=983\;\mathrm{cm}^3\text{ or }983\mathrm{ml}}.
+% \]
+% \end{solution}
 
-\subsubsection{Integration by parts} 
+% \subsubsection{Integration by parts} 
 
-Often, a product of two functions can be integrated using a process known as `integration by parts'. In a sense, integrating by parts is the reverse of differentiating using the product rule.
+% Often, a product of two functions can be integrated using a process known as `integration by parts'. In a sense, integrating by parts is the reverse of differentiating using the product rule.
 
-The basic formula for integration by parts can be derived from the product rule. Start with the function
-\[
-y=u(x)v(x) \qquad\text{therefore}\qquad y'(x)=u'(x)v(x)+u(x)v'(x).
-\]
-Taking the integral of both sides gives $\int y'(x)\,{\rm d}x=\int u'(x)v(x)\,{\rm d}x+\int u(x)v'(x)\,{\rm d}x.$ Noting that $\int y'(x)\,{\rm d}x=y=u(x)v(x)$, we arrive at the formula for integration by parts
-\begin{equation}
-\label{eq:ibp} \int u(x)v'(x)\,{\rm d}x=u(x)v(x)-\int u'(x)v(x)\,{\rm d}x.
-\end{equation}
-It can be used to integrate a product by defining one factor as $u(x)$ and the other as $v'(x)$, with the aim of making the resulting integral easier.
+% The basic formula for integration by parts can be derived from the product rule. Start with the function
+% \[
+% y=u(x)v(x) \qquad\text{therefore}\qquad y'(x)=u'(x)v(x)+u(x)v'(x).
+% \]
+% Taking the integral of both sides gives $\int y'(x)\,{\rm d}x=\int u'(x)v(x)\,{\rm d}x+\int u(x)v'(x)\,{\rm d}x.$ Noting that $\int y'(x)\,{\rm d}x=y=u(x)v(x)$, we arrive at the formula for integration by parts
+% \begin{equation}
+% \label{eq:ibp} \int u(x)v'(x)\,{\rm d}x=u(x)v(x)-\int u'(x)v(x)\,{\rm d}x.
+% \end{equation}
+% It can be used to integrate a product by defining one factor as $u(x)$ and the other as $v'(x)$, with the aim of making the resulting integral easier.
 
-Take the integral $\int x\sin x\,{\rm d}x$, let $u(x)=x$ and $v'(x)=\sin x$. Thus, $u'(x)=1$ and $v(x)=-\cos x$. Using equation \eqref{eq:ibp}
-\begin{align*}
-\int x\sin x\,{\rm d}x &= -x\cos x+\int\cos x\,{\rm d}x.\\
-&=-x\cos x+\sin x+C.
-\end{align*}
+% Take the integral $\int x\sin x\,{\rm d}x$, let $u(x)=x$ and $v'(x)=\sin x$. Thus, $u'(x)=1$ and $v(x)=-\cos x$. Using equation \eqref{eq:ibp}
+% \begin{align*}
+% \int x\sin x\,{\rm d}x &= -x\cos x+\int\cos x\,{\rm d}x.\\
+% &=-x\cos x+\sin x+C.
+% \end{align*}
 
-Sometimes, integration by parts needs to be used more than once. For example, the function $x^2\cos x$ integrates (using equation \eqref{eq:ibp} with $u=x^2$ and $v=\cos x$) to
-\begin{align*}
-    \int x^2\cos x\,{\rm d}x &= x^2\sin x-\int2x\sin x\,{\rm d}x\\
-    &= x^2\sin x-\left(-2x\cos x+\int2\cos x\,{\rm d}x\right)\\
-    &=(x^2-2)\sin x+2x\cos x+C.
-\end{align*}
+% Sometimes, integration by parts needs to be used more than once. For example, the function $x^2\cos x$ integrates (using equation \eqref{eq:ibp} with $u=x^2$ and $v=\cos x$) to
+% \begin{align*}
+%     \int x^2\cos x\,{\rm d}x &= x^2\sin x-\int2x\sin x\,{\rm d}x\\
+%     &= x^2\sin x-\left(-2x\cos x+\int2\cos x\,{\rm d}x\right)\\
+%     &=(x^2-2)\sin x+2x\cos x+C.
+% \end{align*}
 
-\begin{example}[Lecture]
-Using integration by parts, find
-\[
-\int e^x\sin x\,{\rm d}x.
-\]
-\end{example}
+% \begin{example}[Lecture]
+% Using integration by parts, find
+% \[
+% \int e^x\sin x\,{\rm d}x.
+% \]
+% \end{example}
 
-\begin{solution}
-Define $u=\sin x$ and $v'=e^x$. Then $u'=\blank{\cos(x)}$ and $v=\blank{e^x}$.
+% \begin{solution}
+% Define $u=\sin x$ and $v'=e^x$. Then $u'=\blank{\cos(x)}$ and $v=\blank{e^x}$.
 
-Using equation \eqref{eq:ibp} $\int uv'\,{\rm d}x=uv-\int u'v\,{\rm d}x$ so,
-\[
-\int e^x\sin x\,{\rm d}x=\blank{e^x\sin x}-\int \blank{e^x\cos x}\,{\rm d}x. \tag{1}
-\]
-Now define $u=\cos(x)$ and $v'=e^x$. Then $u'=\blank{-\sin(x)}$ and $v=\blank{e^x}$.
-\[
-\int e^x\cos x\,{\rm d}x=\blank{e^x\cos x} + \int \blank{e^x\sin x}\,{\rm d}x. \tag{2}
-\]
-Define $I=\int e^x\sin x\,{\rm d}x$ then we can write equation (2) as
-\[
-\int e^x\cos x\,{\rm d}x = \blank{e^x\cos x+I}.
-\]
-Substituting into equation (1),
-\[
-I=\blank{e^x\sin x-e^x\cos x-I}
-\qquad \therefore \;
-\blank{2I=e^x(\sin x-\cos x)}\, .
-\]
-And so
-\[
-\int e^x\sin x\,{\rm d}x=\blank{\frac{e^x}{2}(\sin x-\cos x)+C}.
-\]
-\end{solution}
+% Using equation \eqref{eq:ibp} $\int uv'\,{\rm d}x=uv-\int u'v\,{\rm d}x$ so,
+% \[
+% \int e^x\sin x\,{\rm d}x=\blank{e^x\sin x}-\int \blank{e^x\cos x}\,{\rm d}x. \tag{1}
+% \]
+% Now define $u=\cos(x)$ and $v'=e^x$. Then $u'=\blank{-\sin(x)}$ and $v=\blank{e^x}$.
+% \[
+% \int e^x\cos x\,{\rm d}x=\blank{e^x\cos x} + \int \blank{e^x\sin x}\,{\rm d}x. \tag{2}
+% \]
+% Define $I=\int e^x\sin x\,{\rm d}x$ then we can write equation (2) as
+% \[
+% \int e^x\cos x\,{\rm d}x = \blank{e^x\cos x+I}.
+% \]
+% Substituting into equation (1),
+% \[
+% I=\blank{e^x\sin x-e^x\cos x-I}
+% \qquad \therefore \;
+% \blank{2I=e^x(\sin x-\cos x)}\, .
+% \]
+% And so
+% \[
+% \int e^x\sin x\,{\rm d}x=\blank{\frac{e^x}{2}(\sin x-\cos x)+C}.
+% \]
+% \end{solution}
 
-Usually, if the integrand is a product with a polynomial, then the polynomial is taken to be $u(x)$ so that $u'(x)$ will present a simpler integral. An exception is if the other factor is a logarithm or an inverse trigonometric function.
+% Usually, if the integrand is a product with a polynomial, then the polynomial is taken to be $u(x)$ so that $u'(x)$ will present a simpler integral. An exception is if the other factor is a logarithm or an inverse trigonometric function.
 
-For example, to find $\int x^2\ln x\,{\rm d}x$, define $u(x)=\ln x$ and $v'(x)=x^2$, so that $u'(x)=\frac{1}{x}$ and $v(x)=\frac{x^3}{3}$. Using equation \eqref{eq:ibp} the integral becomes
-\begin{align*}
-    \int x^2\ln x\,{\rm d}x &= \frac{1}{3}x^3\ln x-\int\frac{x^3}{3x}\,{\rm d}x\\
-    &=\frac{1}{3}x^3\ln x-\frac{1}{3}\int x^2\,{\rm d}x\\
-    &= \frac{1}{3}x^3\ln x-\frac{1}{9}x^3+C.
-\end{align*}
+% For example, to find $\int x^2\ln x\,{\rm d}x$, define $u(x)=\ln x$ and $v'(x)=x^2$, so that $u'(x)=\frac{1}{x}$ and $v(x)=\frac{x^3}{3}$. Using equation \eqref{eq:ibp} the integral becomes
+% \begin{align*}
+%     \int x^2\ln x\,{\rm d}x &= \frac{1}{3}x^3\ln x-\int\frac{x^3}{3x}\,{\rm d}x\\
+%     &=\frac{1}{3}x^3\ln x-\frac{1}{3}\int x^2\,{\rm d}x\\
+%     &= \frac{1}{3}x^3\ln x-\frac{1}{9}x^3+C.
+% \end{align*}
 
-\begin{example}[Lecture]
-Using integration by parts, find
-\[
-\int\tan^{-1}x\,{\rm d}x.
-\]
-\end{example}
+% \begin{example}[Lecture]
+% Using integration by parts, find
+% \[
+% \int\tan^{-1}x\,{\rm d}x.
+% \]
+% \end{example}
 
-\begin{solution}
-Define $u=\tan^{-1}x$ and $v'=1$. Then $u'=\blank{\dfrac{1}{1+x^2}}$ and $v=\blank{x}$.
+% \begin{solution}
+% Define $u=\tan^{-1}x$ and $v'=1$. Then $u'=\blank{\dfrac{1}{1+x^2}}$ and $v=\blank{x}$.
 
-Using the formula for IBP (equation \eqref{eq:ibp})
-\[
-\int\tan^{-1}x\,{\rm d}x=\blank{x\tan^{-1}x}-\int\blank{\frac{x}{1+x^2}}\,{\rm d}x.
-\]
-Using the substitution $z=x^2$, and so $dz=\blank{2x\,{\rm d}x}$,
-\begin{align*}
-    \int\frac{x}{1+x^2}\,{\rm d}x&=\blank{\frac{1}{2}\int\frac{1}{1+z}\,{\rm d}z}\\
-    &=\blank{\frac{1}{2}\ln(1+z) = \frac{1}{2}\ln(1+x^2)}.
-\end{align*}
-Therefore,
-\[
-\int\tan^{-1}x\,{\rm d}x=\blank{x\tan^{-1}x-\frac{1}{2}\ln(1+x^2)+C}.
-\]
-\end{solution}
+% Using the formula for IBP (equation \eqref{eq:ibp})
+% \[
+% \int\tan^{-1}x\,{\rm d}x=\blank{x\tan^{-1}x}-\int\blank{\frac{x}{1+x^2}}\,{\rm d}x.
+% \]
+% Using the substitution $z=x^2$, and so $dz=\blank{2x\,{\rm d}x}$,
+% \begin{align*}
+%     \int\frac{x}{1+x^2}\,{\rm d}x&=\blank{\frac{1}{2}\int\frac{1}{1+z}\,{\rm d}z}\\
+%     &=\blank{\frac{1}{2}\ln(1+z) = \frac{1}{2}\ln(1+x^2)}.
+% \end{align*}
+% Therefore,
+% \[
+% \int\tan^{-1}x\,{\rm d}x=\blank{x\tan^{-1}x-\frac{1}{2}\ln(1+x^2)+C}.
+% \]
+% \end{solution}
 
-\[
-\int u(x)v'(x)\,{\rm d}x=u(x)v(x)-\int u'(x)v(x)\,{\rm d}x.
-\]
-Note that, to carry out definite integration using integration by parts, all terms need to be evaluated at the limits, so
-\[
-\int_a^b u(x)v'(x)\,{\rm d}x=\left[u(x)v(x)\right]_a^b-\int_a^b u'(x)v(x)\,{\rm d}x.
-\]
+% \[
+% \int u(x)v'(x)\,{\rm d}x=u(x)v(x)-\int u'(x)v(x)\,{\rm d}x.
+% \]
+% Note that, to carry out definite integration using integration by parts, all terms need to be evaluated at the limits, so
+% \[
+% \int_a^b u(x)v'(x)\,{\rm d}x=\left[u(x)v(x)\right]_a^b-\int_a^b u'(x)v(x)\,{\rm d}x.
+% \]
 
-\subsubsection{Integration by partial fractions} 
-\label{sec:IBpartfrac}
+% \subsubsection{Integration by partial fractions} 
+% \label{sec:IBpartfrac}
 
-If a function can be expressed in terms of partial fractions, then these partial fractions can generally be integrated.
+% If a function can be expressed in terms of partial fractions, then these partial fractions can generally be integrated.
 
-\begin{example}[Video]
-Find
-\[
-\int\frac{x+17}{(x+3)(2x-1)}\,{\rm d}x
-\]
-using integration by partial fractions.
-\end{example}
+% \begin{example}[Video]
+% Find
+% \[
+% \int\frac{x+17}{(x+3)(2x-1)}\,{\rm d}x
+% \]
+% using integration by partial fractions.
+% \end{example}
 
-\begin{solution}
-First write the partial fractions form
-\[
-\frac{x+17}{(x+3)(2x-1)}=\blank{\frac{A}{x+3}+\frac{B}{2x-1}}\, .
-\]
-Multiply through by the denominator
-\[
-x+17=\blank{A(2x-1)+B(x+3)}\, .
-\]
-Setting $x=-3$ allows us to find $A$:
-\[
-\blank{14=-7A \qquad\therefore\qquad A=-2}.
-\]
-Setting $x=1/2$ allows us to find $B$:
-\[
-\blank{\frac{35}{2}=\frac{7}{2}B \qquad\therefore\qquad B=5}.
-\]
-Now evaluate the integral
-\begin{align*}
-    \int\frac{x+17}{(x+3)(2x-1)}\,{\rm d}x
-    &=\blank{-2\int\frac{1}{x+3}\,{\rm d}x+5\int\frac{1}{2x-1}\,{\rm d}x}\\
-    &= \blank{-2\ln|x+3|+\frac{5}{2}\ln|2x-1|+C}.
-\end{align*}
-\end{solution}
+% \begin{solution}
+% First write the partial fractions form
+% \[
+% \frac{x+17}{(x+3)(2x-1)}=\blank{\frac{A}{x+3}+\frac{B}{2x-1}}\, .
+% \]
+% Multiply through by the denominator
+% \[
+% x+17=\blank{A(2x-1)+B(x+3)}\, .
+% \]
+% Setting $x=-3$ allows us to find $A$:
+% \[
+% \blank{14=-7A \qquad\therefore\qquad A=-2}.
+% \]
+% Setting $x=1/2$ allows us to find $B$:
+% \[
+% \blank{\frac{35}{2}=\frac{7}{2}B \qquad\therefore\qquad B=5}.
+% \]
+% Now evaluate the integral
+% \begin{align*}
+%     \int\frac{x+17}{(x+3)(2x-1)}\,{\rm d}x
+%     &=\blank{-2\int\frac{1}{x+3}\,{\rm d}x+5\int\frac{1}{2x-1}\,{\rm d}x}\\
+%     &= \blank{-2\ln|x+3|+\frac{5}{2}\ln|2x-1|+C}.
+% \end{align*}
+% \end{solution}
 
-\begin{recap}{\ref{sec:further_int}}
-\item \textbf{Integration by substitution} is useful for integrands that can be expressed in the form
-\[
-\int f(g(x))g'(x)\,{\rm d}x.
-\]
-\item \textbf{Integration by parts} is used for integrating products of functions
-\[
-\int u(x)v'(x)\,{\rm d}x=u(x)v(x)-\int u'(x)v(x)\,{\rm d}x.
-\]
-\item \textbf{Partial fractions} can be used to make suitable integrals easier.
-\end{recap}
+% \begin{recap}{\ref{sec:further_int}}
+% \item \textbf{Integration by substitution} is useful for integrands that can be expressed in the form
+% \[
+% \int f(g(x))g'(x)\,{\rm d}x.
+% \]
+% \item \textbf{Integration by parts} is used for integrating products of functions
+% \[
+% \int u(x)v'(x)\,{\rm d}x=u(x)v(x)-\int u'(x)v(x)\,{\rm d}x.
+% \]
+% \item \textbf{Partial fractions} can be used to make suitable integrals easier.
+% \end{recap}
 
-\subsection{Double integrals over rectangular regions}
-\label{sec:double_int}
+% \subsection{Double integrals over rectangular regions}
+% \label{sec:double_int}
 
-\begin{learningoutcomes}
-\item Calculate the volume under a surface with rectangular bounds using integration
-\end{learningoutcomes}
+% \begin{learningoutcomes}
+% \item Calculate the volume under a surface with rectangular bounds using integration
+% \end{learningoutcomes}
 
-The integral $\int_a^b f(x)\,{\rm d}x$ represents the area under the curve $y=f(x)$ between $x=a$ and $x=b$. Consider instead a function of two variables $f(x,y)$. The integral
-\[
-\int_c^d f(x,y)\,{\rm d}x
-\]
-represents the area of a slice at position $y$. Multiplying by ${\rm d}y$ gives $\left(\int_c^d f(x,y) \,{\rm d}x\right) \,{\rm d}y$ representing the volume of a slice at position $y$ with infinitesimal thickness ${\rm d}y$. The sum of all slices between $y=a$ and $y=b$ is given by the integral of the integral, \emph{i.e.}
-\begin{equation}
-    \label{eq:doubleint} \int_a^b\int_c^d f(x,y)\,{\rm d}x\,{\rm d}y \, .
-\end{equation}
+% The integral $\int_a^b f(x)\,{\rm d}x$ represents the area under the curve $y=f(x)$ between $x=a$ and $x=b$. Consider instead a function of two variables $f(x,y)$. The integral
+% \[
+% \int_c^d f(x,y)\,{\rm d}x
+% \]
+% represents the area of a slice at position $y$. Multiplying by ${\rm d}y$ gives $\left(\int_c^d f(x,y) \,{\rm d}x\right) \,{\rm d}y$ representing the volume of a slice at position $y$ with infinitesimal thickness ${\rm d}y$. The sum of all slices between $y=a$ and $y=b$ is given by the integral of the integral, \emph{i.e.}
+% \begin{equation}
+%     \label{eq:doubleint} \int_a^b\int_c^d f(x,y)\,{\rm d}x\,{\rm d}y \, .
+% \end{equation}
 
-The double integral in equation \eqref{eq:doubleint} represents the volume underneath the function but above the rectangle $z=0$; $a\leq y\leq b$; $c\leq x\leq d$.
+% The double integral in equation \eqref{eq:doubleint} represents the volume underneath the function but above the rectangle $z=0$; $a\leq y\leq b$; $c\leq x\leq d$.
 
-Figure \ref{fig:double_integrals} illustrates the double integration process.
+% Figure \ref{fig:double_integrals} illustrates the double integration process.
 
-\textbf{Inner and outer integral.} From the definition in equation \eqref{eq:doubleint} the integral $\int_c^d f(x,y)\,{\rm d}x$
-is known as the `inner integral'. It can be evaluated and will be a function of $y$
-\[
-\int_c^d f(x,y)\,{\rm d}x=g(y).
-\]
-To find $g(y)$, treat $y$ as a constant and integrate with respect to $x$. \emph{E.g.} If $f(x,y)=e^x\cos y$, then
-\[
-\int_c^d f(x,y)\,{\rm d}x=\cos y\left[e^d-e^c\right].
-\]
+% \textbf{Inner and outer integral.} From the definition in equation \eqref{eq:doubleint} the integral $\int_c^d f(x,y)\,{\rm d}x$
+% is known as the `inner integral'. It can be evaluated and will be a function of $y$
+% \[
+% \int_c^d f(x,y)\,{\rm d}x=g(y).
+% \]
+% To find $g(y)$, treat $y$ as a constant and integrate with respect to $x$. \emph{E.g.} If $f(x,y)=e^x\cos y$, then
+% \[
+% \int_c^d f(x,y)\,{\rm d}x=\cos y\left[e^d-e^c\right].
+% \]
 
-Once the inner integral is evaluated it can be placed in the main integral to give
-\[
-\int_a^b g(y)\,{\rm d}y.
-\]
-This is known as the `outer integral'.
+% Once the inner integral is evaluated it can be placed in the main integral to give
+% \[
+% \int_a^b g(y)\,{\rm d}y.
+% \]
+% This is known as the `outer integral'.
 
-Note that reversing the order of the integrations (along with their limits) preserves the integral, \emph{i.e.}
-\[
-\int_a^b\int_{x=c}^d f(x,y)\,{\rm d}x\,{\rm d}y
-=
-\int_c^d\int_{y=a}^b f(x,y)\,{\rm d}y\,{\rm d}x.
-\]
+% Note that reversing the order of the integrations (along with their limits) preserves the integral, \emph{i.e.}
+% \[
+% \int_a^b\int_{x=c}^d f(x,y)\,{\rm d}x\,{\rm d}y
+% =
+% \int_c^d\int_{y=a}^b f(x,y)\,{\rm d}y\,{\rm d}x.
+% \]
 
-\begin{figure}[ht]
-    \centering
-    \subfig{0.32}{Figures/Section3/35_doubleint1.png}{Area of  a strip}
-    \hfill
-    \subfig{0.32}{Figures/Section3/35_doubleint2.png}{Volume of a strip}
-    \hfill
-    \subfig{0.32}{Figures/Section3/35_doubleint3.png}{Volume under the surface}
-    \\
-    \subfig{0.32}{Figures/Section3/35_double_topdown1.png}{$\int_c^d f(x,y)\,{\rm d}x$}
-    \hfill
-    \subfig{0.32}{Figures/Section3/35_double_topdown2.png}{$\left(\int_c^d f(x,y)\,{\rm d}x\right)\,{\rm d}y$}
-    \hfill
-    \subfig{0.32}{Figures/Section3/35_double_topdown3.png}{$\int_a^b\int_{x=c}^d f(x,y)\,{\rm d}x\,{\rm d}y$}
-    \caption{Building up the double integral to find the volume under a surface step-by-step from (a)--(c) three-dimensional view and (d)--(f) looking down from above.}
-    \label{fig:double_integrals}
-\end{figure}
+% \begin{figure}[ht]
+%     \centering
+%     \subfig{0.32}{Figures/Section3/35_doubleint1.png}{Area of  a strip}
+%     \hfill
+%     \subfig{0.32}{Figures/Section3/35_doubleint2.png}{Volume of a strip}
+%     \hfill
+%     \subfig{0.32}{Figures/Section3/35_doubleint3.png}{Volume under the surface}
+%     \\
+%     \subfig{0.32}{Figures/Section3/35_double_topdown1.png}{$\int_c^d f(x,y)\,{\rm d}x$}
+%     \hfill
+%     \subfig{0.32}{Figures/Section3/35_double_topdown2.png}{$\left(\int_c^d f(x,y)\,{\rm d}x\right)\,{\rm d}y$}
+%     \hfill
+%     \subfig{0.32}{Figures/Section3/35_double_topdown3.png}{$\int_a^b\int_{x=c}^d f(x,y)\,{\rm d}x\,{\rm d}y$}
+%     \caption{Building up the double integral to find the volume under a surface step-by-step from (a)--(c) three-dimensional view and (d)--(f) looking down from above.}
+%     \label{fig:double_integrals}
+% \end{figure}
 
-\begin{example}[DIY]
-Find the double integral
-\[
-\int_{-\pi}^{\pi}\int_0^1 (x^2+2x-1)\cos\left(\frac{y}{2}\right)\,{\rm d}x\,{\rm d}y
-\]
-and show it is the same if the order of integration is reversed
-\[
-\int_0^1\int_{-\pi}^{\pi}(x^2+2x-1)\cos\left(\frac{y}{2}\right)\,{\rm d}y\,{\rm d}x.
-\]
-\end{example}
+% \begin{example}[DIY]
+% Find the double integral
+% \[
+% \int_{-\pi}^{\pi}\int_0^1 (x^2+2x-1)\cos\left(\frac{y}{2}\right)\,{\rm d}x\,{\rm d}y
+% \]
+% and show it is the same if the order of integration is reversed
+% \[
+% \int_0^1\int_{-\pi}^{\pi}(x^2+2x-1)\cos\left(\frac{y}{2}\right)\,{\rm d}y\,{\rm d}x.
+% \]
+% \end{example}
 
-\begin{blanksol}
-Take the first case and evaluate the inner integral, treating $y$ as constant:
-\[
-\int_0^1(x^2+2x-1)\cos\left(\frac{y}{2}\right)\,{\rm d}x
-=
-\cos\left(\frac{y}{2}\right)
-\left[\frac{x^3}{3}+x^2-x\right]_0^1
-=
-\frac{1}{3}\cos\left(\frac{y}{2}\right).
-\]
-Now evaluate the outer integral:
-\[
-\frac{1}{3}\int_{-\pi}^{\pi}\cos\left(\frac{y}{2}\right)\,{\rm d}y
-=
-\frac{2}{3}\left[\sin\left(\frac{y}{2}\right)\right]_{-\pi}^{\pi}
-=
-\frac{4}{3}.
-\]
+% \begin{blanksol}
+% Take the first case and evaluate the inner integral, treating $y$ as constant:
+% \[
+% \int_0^1(x^2+2x-1)\cos\left(\frac{y}{2}\right)\,{\rm d}x
+% =
+% \cos\left(\frac{y}{2}\right)
+% \left[\frac{x^3}{3}+x^2-x\right]_0^1
+% =
+% \frac{1}{3}\cos\left(\frac{y}{2}\right).
+% \]
+% Now evaluate the outer integral:
+% \[
+% \frac{1}{3}\int_{-\pi}^{\pi}\cos\left(\frac{y}{2}\right)\,{\rm d}y
+% =
+% \frac{2}{3}\left[\sin\left(\frac{y}{2}\right)\right]_{-\pi}^{\pi}
+% =
+% \frac{4}{3}.
+% \]
 
-Reversing the order and evaluating the inner integral first:
-\[
-\int_{-\pi}^{\pi}(x^2+2x-1)\cos\left(\frac{y}{2}\right)\,{\rm d}y
-=
-(x^2+2x-1)
-\left[2\sin\left(\frac{y}{2}\right)\right]_{-\pi}^{\pi}
-\]
-\[
-=4(x^2+2x-1).
-\]
-Now evaluate the outer integral:
-\[
-4\int_0^1(x^2+2x-1)\,{\rm d}x
-=
-4\left[\frac{x^3}{3}+x^2-x\right]_0^1
-=
-\frac{4}{3}.
-\]
-\end{blanksol}
+% Reversing the order and evaluating the inner integral first:
+% \[
+% \int_{-\pi}^{\pi}(x^2+2x-1)\cos\left(\frac{y}{2}\right)\,{\rm d}y
+% =
+% (x^2+2x-1)
+% \left[2\sin\left(\frac{y}{2}\right)\right]_{-\pi}^{\pi}
+% \]
+% \[
+% =4(x^2+2x-1).
+% \]
+% Now evaluate the outer integral:
+% \[
+% 4\int_0^1(x^2+2x-1)\,{\rm d}x
+% =
+% 4\left[\frac{x^3}{3}+x^2-x\right]_0^1
+% =
+% \frac{4}{3}.
+% \]
+% \end{blanksol}
 
-\begin{example}[Video]
-An experiment is set up to measure the diffusion coefficient of benzene in water.
+% \begin{example}[Video]
+% An experiment is set up to measure the diffusion coefficient of benzene in water.
 
-The flux at the outlet $F$ is measured, and should be given approximately by
-\[
-\frac{Fh}{D}=\int_0^l\int_0^l c(x,y)\,{\rm d}x\,{\rm d}y
-\]
-where $D$ is the diffusion constant and $c(x,y)$ the concentration at the inlet.
+% The flux at the outlet $F$ is measured, and should be given approximately by
+% \[
+% \frac{Fh}{D}=\int_0^l\int_0^l c(x,y)\,{\rm d}x\,{\rm d}y
+% \]
+% where $D$ is the diffusion constant and $c(x,y)$ the concentration at the inlet.
 
-To correctly estimate $D$, the experiment is meant to keep $c(x,y)=c_0$ (a constant). However, due to an error in the setup, the actual concentration is
-\[
-c(x,y)=\left(\frac{3}{4}x^2+y+xy\right)c_0.
-\]
-Given that $F$ is measured to be $2.5$ [mol/s], $h=0.04$ [cm], $l=1$ [cm] and $c_0=10^4$ [mol/cm$^3$] find
-\begin{itemize}
-\item the real value of $D$ (using the actual concentration $c=\left(\frac{3}{4}x^2+y+xy\right)c_0$)
-\item the value of $D$ obtained by the researchers (assuming $c=c_0$)
-\end{itemize}
-\end{example}
+% To correctly estimate $D$, the experiment is meant to keep $c(x,y)=c_0$ (a constant). However, due to an error in the setup, the actual concentration is
+% \[
+% c(x,y)=\left(\frac{3}{4}x^2+y+xy\right)c_0.
+% \]
+% Given that $F$ is measured to be $2.5$ [mol/s], $h=0.04$ [cm], $l=1$ [cm] and $c_0=10^4$ [mol/cm$^3$] find
+% \begin{itemize}
+% \item the real value of $D$ (using the actual concentration $c=\left(\frac{3}{4}x^2+y+xy\right)c_0$)
+% \item the value of $D$ obtained by the researchers (assuming $c=c_0$)
+% \end{itemize}
+% \end{example}
 
-\begin{solution}
-First take the case where
-\[
-c(x,y)=\left(\frac{3}{4}x^2+y+xy\right)c_0
-\]
-and compute the inner integral
-\[
-I(y)=\int_0^1c(x,y)\,{\rm d}x
-=
-\blank{c_0\left[\frac{1}{4}x^3+yx+\frac{1}{2}x^2y\right]_0^1}
-\]
-\[
-=\blank{c_0\left(\frac{1}{4}+\frac{3}{2}y\right)}.
-\]
-Now compute the outer integral
-\[
-\frac{Fh}{D}=\int_0^1I(y)\,{\rm d}y
-=
-\blank{c_0\left[\frac{1}{4}y+\frac{3}{4}y^2\right]_0^1}
-\]
-\[
-=\blank{c_0\times1=10^4\;[\mathrm{mol/cm}]}.
-\]
-Therefore,
-\[
-D=\blank{\frac{Fh}{c_0}=10^{-5}\;[\mathrm{cm}^2/\mathrm{s}]}.
-\]
+% \begin{solution}
+% First take the case where
+% \[
+% c(x,y)=\left(\frac{3}{4}x^2+y+xy\right)c_0
+% \]
+% and compute the inner integral
+% \[
+% I(y)=\int_0^1c(x,y)\,{\rm d}x
+% =
+% \blank{c_0\left[\frac{1}{4}x^3+yx+\frac{1}{2}x^2y\right]_0^1}
+% \]
+% \[
+% =\blank{c_0\left(\frac{1}{4}+\frac{3}{2}y\right)}.
+% \]
+% Now compute the outer integral
+% \[
+% \frac{Fh}{D}=\int_0^1I(y)\,{\rm d}y
+% =
+% \blank{c_0\left[\frac{1}{4}y+\frac{3}{4}y^2\right]_0^1}
+% \]
+% \[
+% =\blank{c_0\times1=10^4\;[\mathrm{mol/cm}]}.
+% \]
+% Therefore,
+% \[
+% D=\blank{\frac{Fh}{c_0}=10^{-5}\;[\mathrm{cm}^2/\mathrm{s}]}.
+% \]
 
-Now consider the intended setup where $c(x,y)=c_0$, the integration becomes
-\[
-\int_0^1\int_0^1c_0\,{\rm d}x\,{\rm d}y
-=
-\blank{c_0\int_0^1[x]_0^1\,{\rm d}y}
-\]
-\[
-=\blank{c_0[y]_0^1=c_0=10^4\;[\mathrm{mol/cm}]}.
-\]
-and so
-\[
-D=\blank{\frac{Fh}{c_0}=10^{-5}\;[\mathrm{cm}^2/\mathrm{s}]}.
-\]
-So, we see that \blankpar{in both cases the result is the same, the researchers got lucky!}
-\end{solution}
+% Now consider the intended setup where $c(x,y)=c_0$, the integration becomes
+% \[
+% \int_0^1\int_0^1c_0\,{\rm d}x\,{\rm d}y
+% =
+% \blank{c_0\int_0^1[x]_0^1\,{\rm d}y}
+% \]
+% \[
+% =\blank{c_0[y]_0^1=c_0=10^4\;[\mathrm{mol/cm}]}.
+% \]
+% and so
+% \[
+% D=\blank{\frac{Fh}{c_0}=10^{-5}\;[\mathrm{cm}^2/\mathrm{s}]}.
+% \]
+% So, we see that \blankpar{in both cases the result is the same, the researchers got lucky!}
+% \end{solution}
 
-\begin{recap}{\ref{sec:double_int}}
-\item The double integral
-\[
-\int_a^b\int_c^d f(x,y)\,{\rm d}x\,{\rm d}y
-\]
-consists of
-\begin{itemize}
-\item an \textbf{inner integral}: evaluated first to give
-\[
-\int_c^d f(x,y)\,{\rm d}x=g(y)
-\]
-\item and an \textbf{outer integral}: evaluated using the result
-\[
-\int_a^b g(y)\,{\rm d}y
-\]
-\end{itemize}
-\item The result is the \textbf{volume} between the surface $z=f(x,y)$ and the plane $z=0$ in the \textbf{rectangular region} $a\leq y\leq b$; $c\leq x\leq d$.
-\end{recap}
+% \begin{recap}{\ref{sec:double_int}}
+% \item The double integral
+% \[
+% \int_a^b\int_c^d f(x,y)\,{\rm d}x\,{\rm d}y
+% \]
+% consists of
+% \begin{itemize}
+% \item an \textbf{inner integral}: evaluated first to give
+% \[
+% \int_c^d f(x,y)\,{\rm d}x=g(y)
+% \]
+% \item and an \textbf{outer integral}: evaluated using the result
+% \[
+% \int_a^b g(y)\,{\rm d}y
+% \]
+% \end{itemize}
+% \item The result is the \textbf{volume} between the surface $z=f(x,y)$ and the plane $z=0$ in the \textbf{rectangular region} $a\leq y\leq b$; $c\leq x\leq d$.
+% \end{recap}
 
