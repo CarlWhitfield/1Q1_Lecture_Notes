@@ -250,7 +250,7 @@
     \newcommand{\newtexpage}{\newpage}
 \fi
 
-
+\newcommand{\myvec}[1]{\underline{\mathbf{#1}}}
 \newcommand{\der}[2]{\frac{{\rm d} #1}{{\rm d} #2}}
 \newcommand{\ILOa}{\textbf{[ILO1]} Use equations in implicit or parametric form including straight lines or conic sections to extract relevant information.}
 \newcommand{\ILOb}{\textbf{[ILO2]} Identify the appropriate partial fractions form and find the values of any coefficients for a rational function of a single variable.}
@@ -263,7 +263,7 @@
 \ifcsname insertBlanks\endcsname
     \newcommand{\titlesuffix}{(Gappy version)}
 \else
-    \newcommand{\titlesuffix}{(Completed version) -- Sections 1 \& 2}
+    \newcommand{\titlesuffix}{(Completed version)}% -- Weeks 1-4}
 \fi
 
 % \onehalfspacing
@@ -279,8 +279,10 @@
 \input{Sections/section_1}
 \newtexpage
 \input{Sections/section_2}
-% \newtexpage
-% \input{Sections/section_3}
+\newtexpage
+\input{Sections/section_3}
+\newtexpage
+\input{Sections/section_4}
 
 \end{document}
 
