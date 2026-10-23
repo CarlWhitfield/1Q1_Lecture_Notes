@@ -606,10 +606,9 @@ There are several ways to remember what this means in practice, a common one is 
 % \textbf{Demonstration.} Link to widget.
 \begin{figure}[ht]
     \iflatexml
-        % \<div id="cross-product-widget">\</div> 
-        % % \<script src="https://cdn.plot.ly/plotly-3.0.1.min.js">\</script>
-        % \<script src="bmluser/cross-product-plotly-widget.js">\</script>
-        % \caption{Interactive plot $\myvec{a} \times \myvec{b}$, where the magnitude and direction of $\myvec{b}$ (blue) can be varied using the sliders.}
+        \<div id="cross-product-widget">\</div> 
+        \<script src="bmluser/cross-product-plotly-widget.js">\</script>
+        \caption{Interactive plot $\myvec{a} \times \myvec{b}$, where the magnitude and direction of $\myvec{b}$ (blue) can be varied using the sliders.}
     \else
     \centering
     \includegraphics[width=0.9\textwidth]{Figures/Section4/cross_product.png}
@@ -1252,8 +1251,8 @@ The primitive unit cell of tungsten (shown in orange below) is defined by the ve
 where $a\approx3.17\,[\text{\AA}]$. Calculate the volume of the primitive unit cell to 3 significant figures. Is there an equivalent primitive unit cell that makes the calculation easier?
 \begin{center}
     \iflatexml
-        \<div id="bcc-animation">\</div>
-        \<script src="bmluser/bcc-animation.js">\</script>
+        \<div id="bcc-primitive-widget">\</div>
+        \<script src="bmluser/bcc-primitive-plotly-widget.js">\</script>
     \else
         \includegraphics[width=0.6\textwidth]{Figures/Section4/Ex462_bcc.png}
     \fi
@@ -1286,8 +1285,8 @@ We could also choose the primitive unit cell defined by
 which has the same volume, see the figure below for a sketch of this.
 \begin{center}
     \iflatexml
-        \<div id="bcc-animation-alt">\</div>
-        \<script src="bmluser/bcc-animation-alt.js">\</script>
+        \<div id="bcc-alternative-widget">\</div>
+        \<script src="bmluser/bcc-alternative-plotly-widget.js">\</script>
     \else
         \includegraphics[width=0.6\textwidth]{Figures/Section4/Ex462_bcc_alt.png}
     \fi
