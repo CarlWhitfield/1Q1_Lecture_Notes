@@ -10,5 +10,5 @@ jobs:
         uses: vlmantova/bookml-action@v1
         with:
           # scheme can be basic, small, medium, full
-          scheme: medium
+          scheme: full
           timeout-minutes: 60
