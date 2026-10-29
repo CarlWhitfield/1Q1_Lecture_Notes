@@ -1,32 +1,14 @@
 on: push
-
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
     permissions:
       contents: write
-
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Install BookML dependencies
-        shell: bash
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            latexmk \
-            latexml \
-            texlive-latex-base \
-            texlive-latex-recommended \
-            texlive-latex-extra \
-            texlive-fonts-recommended \
-            texlive-xetex \
-            ghostscript \
-            zip \
-            perl
-
-      - name: Build BookML outputs
-        shell: bash
-        run: |
-          timeout 1800 make all
+      # see https://github.com/vlmantova/bookml-action for all configuration options
+      - name: Compile with BookML
+        uses: vlmantova/bookml-action@v1
+        with:
+          # scheme can be basic, small, medium, full
+          scheme: medium
+          timeout-minutes: 60
