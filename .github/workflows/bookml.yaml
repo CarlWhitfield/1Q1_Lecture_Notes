@@ -9,6 +9,7 @@ jobs:
       - name: Compile with BookML
         uses: vlmantova/bookml-action@v1
         with:
+          replace-bookml: true
           # scheme can be basic, small, medium, full
           scheme: full
           timeout-minutes: 60
