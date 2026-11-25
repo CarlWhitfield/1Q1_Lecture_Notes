@@ -39,6 +39,7 @@
 \usepackage{bookml/bookml}
 \usepackage{comment}
 \usepackage{framed} 
+\usepackage{color}
 
 \ifcsname insertBlanks\endcsname
     \newcommand{\filelabel}{gappy_notes}
@@ -251,6 +252,7 @@
     \newcommand{\newtexpage}{\newpage}
 \fi
 
+\newcommand{\changed}[1]{\textcolor{red}{#1}}
 \newcommand{\myvec}[1]{\underline{\mathbf{#1}}}
 \newcommand{\der}[2]{\frac{{\rm d} #1}{{\rm d} #2}}
 \newcommand{\ILOa}{\textbf{[ILO1]} Use equations in implicit or parametric form including straight lines or conic sections to extract relevant information.}
@@ -276,17 +278,18 @@
 \date{Semester 1 -- Academic Year 2026/27}
 
 \input{Sections/section_0}
-% \newtexpage
-% \input{Sections/section_1}
-% \newtexpage
-% \input{Sections/section_2}
-% \newtexpage
-% \input{Sections/section_3}
-% \newtexpage
-% \input{Sections/section_4}
+\newtexpage
+\input{Sections/section_1}
+\newtexpage
+\input{Sections/section_2}
+\newtexpage
+\input{Sections/section_3}
+\newtexpage
+\input{Sections/section_4}
 \newtexpage
 \input{Sections/section_5}
-
+\newtexpage
+\input{Sections/section_6}
 \end{document}
 
 
